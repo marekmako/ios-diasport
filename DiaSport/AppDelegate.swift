@@ -8,6 +8,14 @@
 
 import UIKit
 
+
+let MENU_STORYBOARD_ID = "menu"
+let SETTINGS_STORYBOARD_ID = "settings"
+let KNOWHOW_STORYBOARD_ID = "knowhow"
+let SOCIAL_STORYBOARD_ID = "social"
+let CALC_STORYBOARD_ID = "calc"
+
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 

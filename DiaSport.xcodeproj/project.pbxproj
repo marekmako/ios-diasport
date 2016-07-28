@@ -7,12 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		206F0DFF1D49FE5400F9F420 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206F0DFE1D49FE5400F9F420 /* Settings.swift */; };
 		20D5BC831D49D44200EF0E2D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D5BC821D49D44200EF0E2D /* AppDelegate.swift */; };
-		20D5BC851D49D44200EF0E2D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D5BC841D49D44200EF0E2D /* ViewController.swift */; };
 		20D5BC881D49D44300EF0E2D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20D5BC861D49D44300EF0E2D /* Main.storyboard */; };
 		20D5BC8A1D49D44300EF0E2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20D5BC891D49D44300EF0E2D /* Assets.xcassets */; };
 		20D5BC8D1D49D44300EF0E2D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20D5BC8B1D49D44300EF0E2D /* LaunchScreen.storyboard */; };
 		20D5BC981D49D44300EF0E2D /* DiaSportTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D5BC971D49D44300EF0E2D /* DiaSportTests.swift */; };
+		20D5BCAB1D49DB9600EF0E2D /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D5BCAA1D49DB9600EF0E2D /* Menu.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,9 +27,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		206F0DFE1D49FE5400F9F420 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		20D5BC7F1D49D44200EF0E2D /* DiaSport.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DiaSport.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20D5BC821D49D44200EF0E2D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		20D5BC841D49D44200EF0E2D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		20D5BC871D49D44300EF0E2D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		20D5BC891D49D44300EF0E2D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		20D5BC8C1D49D44300EF0E2D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +37,7 @@
 		20D5BC931D49D44300EF0E2D /* DiaSportTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DiaSportTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		20D5BC971D49D44300EF0E2D /* DiaSportTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaSportTests.swift; sourceTree = "<group>"; };
 		20D5BC991D49D44300EF0E2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		20D5BCAA1D49DB9600EF0E2D /* Menu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,11 +80,12 @@
 			isa = PBXGroup;
 			children = (
 				20D5BC821D49D44200EF0E2D /* AppDelegate.swift */,
-				20D5BC841D49D44200EF0E2D /* ViewController.swift */,
 				20D5BC861D49D44300EF0E2D /* Main.storyboard */,
 				20D5BC891D49D44300EF0E2D /* Assets.xcassets */,
 				20D5BC8B1D49D44300EF0E2D /* LaunchScreen.storyboard */,
 				20D5BC8E1D49D44300EF0E2D /* Info.plist */,
+				20D5BCAA1D49DB9600EF0E2D /* Menu.swift */,
+				206F0DFE1D49FE5400F9F420 /* Settings.swift */,
 			);
 			path = DiaSport;
 			sourceTree = "<group>";
@@ -146,6 +149,7 @@
 				TargetAttributes = {
 					20D5BC7E1D49D44200EF0E2D = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 4HFWK8AXKL;
 					};
 					20D5BC921D49D44300EF0E2D = {
 						CreatedOnToolsVersion = 7.3;
@@ -197,7 +201,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				20D5BC851D49D44200EF0E2D /* ViewController.swift in Sources */,
+				206F0DFF1D49FE5400F9F420 /* Settings.swift in Sources */,
+				20D5BCAB1D49DB9600EF0E2D /* Menu.swift in Sources */,
 				20D5BC831D49D44200EF0E2D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -327,6 +332,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = DiaSport/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.marekmako.DiaSport;
@@ -338,6 +345,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = DiaSport/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.marekmako.DiaSport;
@@ -388,6 +397,7 @@
 				20D5BC9E1D49D44300EF0E2D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		20D5BC9F1D49D44300EF0E2D /* Build configuration list for PBXNativeTarget "DiaSportTests" */ = {
 			isa = XCConfigurationList;
@@ -396,6 +406,7 @@
 				20D5BCA11D49D44300EF0E2D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

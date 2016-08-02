@@ -80,7 +80,7 @@
         <!--Calc-->
         <scene sceneID="2Ht-FV-6An">
             <objects>
-                <viewController storyboardIdentifier="calc" title="Calc" id="KyQ-TF-28T" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="calc" title="Calc" id="KyQ-TF-28T" customClass="CalcViewController" customModule="DiaSport" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rSd-ad-uPv"/>
                         <viewControllerLayoutGuide type="bottom" id="T1G-11-vCn"/>
@@ -93,20 +93,275 @@
                                 <rect key="frame" x="20" y="28" width="80" height="80"/>
                                 <state key="normal" image="back-arrow"/>
                                 <connections>
-                                    <segue destination="kDH-hJ-UXl" kind="show" id="G2Y-TK-Dk0"/>
+                                    <action selector="onCancel" destination="KyQ-TF-28T" eventType="touchUpInside" id="OiA-ae-3Vn"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cUF-gg-5MA">
+                                <rect key="frame" x="90" y="130" width="420" height="340"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DURATION" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bai-y7-TEV">
+                                        <rect key="frame" x="108" y="20" width="85" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="duration" translatesAutoresizingMaskIntoConstraints="NO" id="vDt-G7-doX">
+                                        <rect key="frame" x="20" y="20" width="80" height="80"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="set time of your plannig physical activity" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7se-TQ-tIg">
+                                        <rect key="frame" x="108" y="49" width="150" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="Fzs-Gn-51t"/>
+                                            <constraint firstAttribute="width" constant="150" id="oc1-uZ-TN6"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="INTENSITY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V1Q-G8-XKd">
+                                        <rect key="frame" x="108" y="129" width="85" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="intensity" translatesAutoresizingMaskIntoConstraints="NO" id="bMX-Pt-qHH">
+                                        <rect key="frame" x="20" y="129" width="80" height="80"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="set time of your plannig physical activity" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="42e-Hh-jMx">
+                                        <rect key="frame" x="108" y="158" width="150" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="HeA-vU-ur1"/>
+                                            <constraint firstAttribute="width" constant="150" id="bdT-jb-xwg"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eGf-Si-6AQ">
+                                        <rect key="frame" x="266" y="129" width="134" height="82"/>
+                                        <state key="normal" title="Button" image="forward"/>
+                                        <connections>
+                                            <segue destination="Kjt-0e-m2H" kind="presentation" modalPresentationStyle="overFullScreen" id="7IZ-o3-Kh1"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CURRENT GLYCEMIA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Iv-bs-abI">
+                                        <rect key="frame" x="108" y="238" width="164" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="unit" translatesAutoresizingMaskIntoConstraints="NO" id="mUB-Ia-dxL">
+                                        <rect key="frame" x="20" y="238" width="80" height="80"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="set time of your plannig physical activity" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hjr-3w-FE5">
+                                        <rect key="frame" x="108" y="267" width="150" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="6B2-TJ-ZOf"/>
+                                            <constraint firstAttribute="width" constant="150" id="qzq-a3-V0I"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Did-5A-C4m">
+                                        <rect key="frame" x="266" y="238" width="134" height="82"/>
+                                        <state key="normal" title="Button" image="forward"/>
+                                        <connections>
+                                            <segue destination="unr-mQ-yMe" kind="presentation" modalPresentationStyle="overFullScreen" id="LbA-Lu-Qld"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9gs-d6-7JM">
+                                        <rect key="frame" x="266" y="20" width="134" height="82"/>
+                                        <state key="normal" title="Button" image="forward"/>
+                                        <connections>
+                                            <segue destination="105-JV-FZa" kind="presentation" modalPresentationStyle="overFullScreen" id="cQP-hR-6Jd"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Did-5A-C4m" secondAttribute="trailing" constant="20" id="0T1-np-Ov5"/>
+                                    <constraint firstAttribute="trailing" secondItem="eGf-Si-6AQ" secondAttribute="trailing" constant="20" id="5EH-m0-AAx"/>
+                                    <constraint firstItem="42e-Hh-jMx" firstAttribute="top" secondItem="V1Q-G8-XKd" secondAttribute="bottom" constant="8" id="6BB-FT-CBB"/>
+                                    <constraint firstItem="bMX-Pt-qHH" firstAttribute="bottom" secondItem="42e-Hh-jMx" secondAttribute="bottom" constant="1" id="6FX-fp-PZc"/>
+                                    <constraint firstItem="6Iv-bs-abI" firstAttribute="top" secondItem="mUB-Ia-dxL" secondAttribute="top" id="80o-y1-CIT"/>
+                                    <constraint firstItem="vDt-G7-doX" firstAttribute="top" secondItem="cUF-gg-5MA" secondAttribute="top" constant="20" id="Cfv-ex-Nrg"/>
+                                    <constraint firstItem="42e-Hh-jMx" firstAttribute="bottom" secondItem="eGf-Si-6AQ" secondAttribute="bottom" constant="-3" id="Cl8-pe-hk9"/>
+                                    <constraint firstItem="hjr-3w-FE5" firstAttribute="top" secondItem="6Iv-bs-abI" secondAttribute="bottom" constant="8" id="Fgp-Ma-eoN"/>
+                                    <constraint firstItem="9gs-d6-7JM" firstAttribute="top" secondItem="cUF-gg-5MA" secondAttribute="top" constant="20" id="HI3-ji-Lqr"/>
+                                    <constraint firstItem="9gs-d6-7JM" firstAttribute="leading" secondItem="7se-TQ-tIg" secondAttribute="trailing" constant="8" id="HPw-s3-xW3"/>
+                                    <constraint firstItem="7se-TQ-tIg" firstAttribute="leading" secondItem="vDt-G7-doX" secondAttribute="trailing" constant="8" id="Hnj-jE-CFj"/>
+                                    <constraint firstItem="vDt-G7-doX" firstAttribute="leading" secondItem="cUF-gg-5MA" secondAttribute="leading" constant="20" id="L5Y-rw-QWN"/>
+                                    <constraint firstItem="vDt-G7-doX" firstAttribute="bottom" secondItem="7se-TQ-tIg" secondAttribute="bottom" constant="1" id="MGN-i8-0xl"/>
+                                    <constraint firstAttribute="trailing" secondItem="9gs-d6-7JM" secondAttribute="trailing" constant="20" id="UEm-9f-9i7"/>
+                                    <constraint firstItem="Did-5A-C4m" firstAttribute="leading" secondItem="hjr-3w-FE5" secondAttribute="trailing" constant="8" id="Utm-38-9kf"/>
+                                    <constraint firstItem="eGf-Si-6AQ" firstAttribute="top" secondItem="V1Q-G8-XKd" secondAttribute="top" id="XKP-dv-Qha"/>
+                                    <constraint firstItem="V1Q-G8-XKd" firstAttribute="leading" secondItem="bMX-Pt-qHH" secondAttribute="trailing" constant="8" id="Yue-2G-zWS"/>
+                                    <constraint firstItem="bai-y7-TEV" firstAttribute="leading" secondItem="vDt-G7-doX" secondAttribute="trailing" constant="8" id="axO-mH-NL9"/>
+                                    <constraint firstItem="mUB-Ia-dxL" firstAttribute="leading" secondItem="cUF-gg-5MA" secondAttribute="leading" constant="20" id="bCq-AR-WMN"/>
+                                    <constraint firstItem="bai-y7-TEV" firstAttribute="top" secondItem="vDt-G7-doX" secondAttribute="top" id="bdH-Yb-L06"/>
+                                    <constraint firstItem="9gs-d6-7JM" firstAttribute="top" secondItem="bai-y7-TEV" secondAttribute="top" id="h1Z-5m-Aml"/>
+                                    <constraint firstItem="hjr-3w-FE5" firstAttribute="leading" secondItem="mUB-Ia-dxL" secondAttribute="trailing" constant="8" id="iMs-0Z-i18"/>
+                                    <constraint firstItem="bMX-Pt-qHH" firstAttribute="leading" secondItem="cUF-gg-5MA" secondAttribute="leading" constant="20" id="jj7-eF-MQJ"/>
+                                    <constraint firstItem="bMX-Pt-qHH" firstAttribute="top" secondItem="vDt-G7-doX" secondAttribute="bottom" constant="29" id="lVH-5r-TY9"/>
+                                    <constraint firstItem="7se-TQ-tIg" firstAttribute="bottom" secondItem="9gs-d6-7JM" secondAttribute="bottom" constant="-3" id="lvV-2q-vul"/>
+                                    <constraint firstItem="Did-5A-C4m" firstAttribute="top" secondItem="6Iv-bs-abI" secondAttribute="top" id="mTd-1U-FJR"/>
+                                    <constraint firstItem="42e-Hh-jMx" firstAttribute="leading" secondItem="bMX-Pt-qHH" secondAttribute="trailing" constant="8" id="nHH-7E-BLs"/>
+                                    <constraint firstItem="mUB-Ia-dxL" firstAttribute="top" secondItem="bMX-Pt-qHH" secondAttribute="bottom" constant="29" id="p18-KU-eeQ"/>
+                                    <constraint firstItem="6Iv-bs-abI" firstAttribute="leading" secondItem="mUB-Ia-dxL" secondAttribute="trailing" constant="8" id="plY-O5-0C4"/>
+                                    <constraint firstItem="V1Q-G8-XKd" firstAttribute="top" secondItem="bMX-Pt-qHH" secondAttribute="top" id="psI-AN-yKn"/>
+                                    <constraint firstAttribute="bottom" secondItem="mUB-Ia-dxL" secondAttribute="bottom" constant="22" id="qAT-KI-VPr"/>
+                                    <constraint firstItem="mUB-Ia-dxL" firstAttribute="bottom" secondItem="hjr-3w-FE5" secondAttribute="bottom" constant="1" id="rBp-iQ-BE8"/>
+                                    <constraint firstItem="hjr-3w-FE5" firstAttribute="bottom" secondItem="Did-5A-C4m" secondAttribute="bottom" constant="-3" id="tZf-kR-FBd"/>
+                                    <constraint firstItem="7se-TQ-tIg" firstAttribute="top" secondItem="bai-y7-TEV" secondAttribute="bottom" constant="8" id="v9r-Zu-tOk"/>
+                                    <constraint firstItem="eGf-Si-6AQ" firstAttribute="leading" secondItem="42e-Hh-jMx" secondAttribute="trailing" constant="8" id="vh7-gK-6zp"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ufp-uR-4nH">
+                                <rect key="frame" x="277" y="550" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="onCalculate" destination="KyQ-TF-28T" eventType="touchUpInside" id="pUZ-mp-bl7"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="JdJ-Nh-nqd" firstAttribute="top" secondItem="rSd-ad-uPv" secondAttribute="bottom" constant="8" id="A9n-lc-a9T"/>
-                            <constraint firstItem="JdJ-Nh-nqd" firstAttribute="leading" secondItem="0xf-cp-Mbc" secondAttribute="leadingMargin" id="o8N-I4-gZ8"/>
+                            <constraint firstItem="Ufp-uR-4nH" firstAttribute="top" relation="greaterThanOrEqual" secondItem="cUF-gg-5MA" secondAttribute="bottom" constant="10" id="6ia-VV-bdd"/>
+                            <constraint firstItem="Ufp-uR-4nH" firstAttribute="centerX" secondItem="0xf-cp-Mbc" secondAttribute="centerX" id="BgB-oK-yAq"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="JdJ-Nh-nqd" secondAttribute="leading" id="Z47-cZ-MUU"/>
+                            <constraint firstItem="T1G-11-vCn" firstAttribute="top" secondItem="Ufp-uR-4nH" secondAttribute="bottom" constant="20" id="gap-9m-9u9"/>
+                            <constraint firstItem="cUF-gg-5MA" firstAttribute="centerY" secondItem="0xf-cp-Mbc" secondAttribute="centerY" id="ggy-dz-sth"/>
+                            <constraint firstItem="JdJ-Nh-nqd" firstAttribute="top" secondItem="rSd-ad-uPv" secondAttribute="bottom" constant="8" id="oQB-WY-DeG"/>
+                            <constraint firstItem="cUF-gg-5MA" firstAttribute="centerX" secondItem="0xf-cp-Mbc" secondAttribute="centerX" id="wRR-mv-MHv"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="calcButton" destination="Ufp-uR-4nH" id="VId-eC-mAf"/>
+                        <outlet property="currentGlycemiaButton" destination="Did-5A-C4m" id="5Jf-p9-VIF"/>
+                        <outlet property="durationButton" destination="9gs-d6-7JM" id="Esk-2f-L81"/>
+                        <outlet property="intensityButton" destination="eGf-Si-6AQ" id="mSU-MN-QPh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K7w-rD-UbP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1093" y="-556"/>
+        </scene>
+        <!--Duration View Controller-->
+        <scene sceneID="HVR-59-lea">
+            <objects>
+                <viewController id="105-JV-FZa" customClass="DurationViewController" customModule="DiaSport" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xNp-Jp-jHP"/>
+                        <viewControllerLayoutGuide type="bottom" id="bws-eT-AxW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tgs-VR-Kje">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A7K-vy-gdQ">
+                                <rect key="frame" x="20" y="28" width="80" height="80"/>
+                                <state key="normal" image="back-arrow"/>
+                                <connections>
+                                    <action selector="onCancel:" destination="105-JV-FZa" eventType="touchUpInside" id="DLS-bU-Bkx"/>
+                                </connections>
+                            </button>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eQf-q8-YB3" customClass="DurationPickerView" customModule="DiaSport" customModuleProvider="target">
+                                <rect key="frame" x="140" y="192" width="320" height="216"/>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="A7K-vy-gdQ" firstAttribute="top" secondItem="xNp-Jp-jHP" secondAttribute="bottom" constant="8" id="0Zf-MJ-gYR"/>
+                            <constraint firstItem="eQf-q8-YB3" firstAttribute="centerY" secondItem="tgs-VR-Kje" secondAttribute="centerY" id="1NP-jj-8Al"/>
+                            <constraint firstItem="A7K-vy-gdQ" firstAttribute="leading" secondItem="tgs-VR-Kje" secondAttribute="leadingMargin" id="dkc-d8-Ldn"/>
+                            <constraint firstItem="eQf-q8-YB3" firstAttribute="centerX" secondItem="tgs-VR-Kje" secondAttribute="centerX" id="rn5-fz-mvG"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="durationPicker" destination="eQf-q8-YB3" id="wwV-7e-jLs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ocg-jf-1sP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1887" y="-1721"/>
+        </scene>
+        <!--Intensity View Controller-->
+        <scene sceneID="4kj-nW-Mst">
+            <objects>
+                <viewController id="Kjt-0e-m2H" customClass="IntensityViewController" customModule="DiaSport" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FiG-B1-WE0"/>
+                        <viewControllerLayoutGuide type="bottom" id="fMu-6F-wgZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LNt-Ls-owX">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NeT-BL-B6W">
+                                <rect key="frame" x="20" y="28" width="80" height="80"/>
+                                <state key="normal" image="back-arrow"/>
+                                <connections>
+                                    <action selector="onCancel" destination="Kjt-0e-m2H" eventType="touchUpInside" id="vwS-nz-3dg"/>
+                                </connections>
+                            </button>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wIg-Nw-wFO" customClass="IntensityPickerView" customModule="DiaSport" customModuleProvider="target">
+                                <rect key="frame" x="140" y="192" width="320" height="216"/>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wIg-Nw-wFO" firstAttribute="centerY" secondItem="LNt-Ls-owX" secondAttribute="centerY" id="3bD-4C-od5"/>
+                            <constraint firstItem="NeT-BL-B6W" firstAttribute="leading" secondItem="LNt-Ls-owX" secondAttribute="leadingMargin" id="99N-33-g2b"/>
+                            <constraint firstItem="NeT-BL-B6W" firstAttribute="top" secondItem="FiG-B1-WE0" secondAttribute="bottom" constant="8" id="qPS-Qb-CGb"/>
+                            <constraint firstItem="wIg-Nw-wFO" firstAttribute="centerX" secondItem="LNt-Ls-owX" secondAttribute="centerX" id="xwy-RD-iPJ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="intensityPicker" destination="wIg-Nw-wFO" id="eoL-6j-xP9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yNi-Um-fY7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1887" y="-1062"/>
+        </scene>
+        <!--Current Glycemia Controller View-->
+        <scene sceneID="4HP-kb-J1m">
+            <objects>
+                <viewController id="unr-mQ-yMe" customClass="CurrentGlycemiaControllerView" customModule="DiaSport" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RNW-5y-bh3"/>
+                        <viewControllerLayoutGuide type="bottom" id="YtA-Xa-9tT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qvk-9K-Lwk">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FNo-xf-hzr">
+                                <rect key="frame" x="20" y="28" width="80" height="80"/>
+                                <state key="normal" image="back-arrow"/>
+                                <connections>
+                                    <action selector="onCancel" destination="unr-mQ-yMe" eventType="touchUpInside" id="6PC-0y-jU4"/>
+                                </connections>
+                            </button>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dQl-iu-A6w" customClass="CurrentGlycemiaPickerView" customModule="DiaSport" customModuleProvider="target">
+                                <rect key="frame" x="140" y="192" width="320" height="216"/>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dQl-iu-A6w" firstAttribute="centerY" secondItem="qvk-9K-Lwk" secondAttribute="centerY" id="Pz0-5f-iNa"/>
+                            <constraint firstItem="FNo-xf-hzr" firstAttribute="leading" secondItem="qvk-9K-Lwk" secondAttribute="leadingMargin" id="Za3-9c-z4M"/>
+                            <constraint firstItem="dQl-iu-A6w" firstAttribute="centerX" secondItem="qvk-9K-Lwk" secondAttribute="centerX" id="fMj-M3-rOT"/>
+                            <constraint firstItem="FNo-xf-hzr" firstAttribute="top" secondItem="RNW-5y-bh3" secondAttribute="bottom" constant="8" id="jlh-E6-WNy"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="currentGlycemiaPicker" destination="dQl-iu-A6w" id="hxL-q0-vSA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dJ5-f2-5MH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1887" y="-410"/>
         </scene>
         <!--Menu-->
         <scene sceneID="fb0-ba-QGY">
@@ -263,10 +518,13 @@
     </scenes>
     <resources>
         <image name="back-arrow" width="80" height="80"/>
+        <image name="duration" width="80" height="80"/>
+        <image name="forward" width="80" height="80"/>
+        <image name="intensity" width="80" height="80"/>
         <image name="unit" width="80" height="80"/>
         <image name="weight" width="80" height="80"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="bFJ-i6-Dtr"/>
+        <segue reference="u7a-fC-Kxr"/>
     </inferredMetricsTieBreakers>
 </document>

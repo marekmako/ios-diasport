@@ -21,3 +21,39 @@ class SettingsViewController: UIViewController {
         dismissViewControllerAnimated(true, completion: nil)
     }
 }
+
+
+
+enum WeightUnit {
+    case Gram, Ounce
+}
+
+
+
+enum GlycemiaUnit {
+    case Mmoll, Mgdl
+}
+
+
+
+// TODO: implement
+class UserSettings {
+    
+    var weightUnit: WeightUnit {
+        get {
+            return WeightUnit.Gram
+        }
+        set {
+            
+        }
+    }
+    
+    var glycemiaUnit: GlycemiaUnit {
+        get {
+            return GlycemiaUnit.Mmoll
+        }
+        set {
+            
+        }
+    }
+}

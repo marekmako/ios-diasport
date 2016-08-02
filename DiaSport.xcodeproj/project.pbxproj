@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		206F0DFF1D49FE5400F9F420 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206F0DFE1D49FE5400F9F420 /* Settings.swift */; };
+		206F0E011D4A270C00F9F420 /* Calc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206F0E001D4A270C00F9F420 /* Calc.swift */; };
+		206F0E031D4F6ED400F9F420 /* Duration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206F0E021D4F6ED400F9F420 /* Duration.swift */; };
+		206F0E051D4FBA3100F9F420 /* Intensity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206F0E041D4FBA3100F9F420 /* Intensity.swift */; };
+		206F0E071D4FBF8900F9F420 /* CurrentGlycemia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206F0E061D4FBF8900F9F420 /* CurrentGlycemia.swift */; };
 		20D5BC831D49D44200EF0E2D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D5BC821D49D44200EF0E2D /* AppDelegate.swift */; };
 		20D5BC881D49D44300EF0E2D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20D5BC861D49D44300EF0E2D /* Main.storyboard */; };
 		20D5BC8A1D49D44300EF0E2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20D5BC891D49D44300EF0E2D /* Assets.xcassets */; };
@@ -28,6 +32,10 @@
 
 /* Begin PBXFileReference section */
 		206F0DFE1D49FE5400F9F420 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		206F0E001D4A270C00F9F420 /* Calc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Calc.swift; sourceTree = "<group>"; };
+		206F0E021D4F6ED400F9F420 /* Duration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Duration.swift; sourceTree = "<group>"; };
+		206F0E041D4FBA3100F9F420 /* Intensity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Intensity.swift; sourceTree = "<group>"; };
+		206F0E061D4FBF8900F9F420 /* CurrentGlycemia.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentGlycemia.swift; sourceTree = "<group>"; };
 		20D5BC7F1D49D44200EF0E2D /* DiaSport.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DiaSport.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20D5BC821D49D44200EF0E2D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		20D5BC871D49D44300EF0E2D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -86,6 +94,10 @@
 				20D5BC8E1D49D44300EF0E2D /* Info.plist */,
 				20D5BCAA1D49DB9600EF0E2D /* Menu.swift */,
 				206F0DFE1D49FE5400F9F420 /* Settings.swift */,
+				206F0E001D4A270C00F9F420 /* Calc.swift */,
+				206F0E021D4F6ED400F9F420 /* Duration.swift */,
+				206F0E041D4FBA3100F9F420 /* Intensity.swift */,
+				206F0E061D4FBF8900F9F420 /* CurrentGlycemia.swift */,
 			);
 			path = DiaSport;
 			sourceTree = "<group>";
@@ -201,7 +213,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				206F0E031D4F6ED400F9F420 /* Duration.swift in Sources */,
+				206F0E051D4FBA3100F9F420 /* Intensity.swift in Sources */,
+				206F0E011D4A270C00F9F420 /* Calc.swift in Sources */,
 				206F0DFF1D49FE5400F9F420 /* Settings.swift in Sources */,
+				206F0E071D4FBF8900F9F420 /* CurrentGlycemia.swift in Sources */,
 				20D5BCAB1D49DB9600EF0E2D /* Menu.swift in Sources */,
 				20D5BC831D49D44200EF0E2D /* AppDelegate.swift in Sources */,
 			);

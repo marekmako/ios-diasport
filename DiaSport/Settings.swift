@@ -22,21 +22,24 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var weightSegmentControl: UISegmentedControl!
     @IBOutlet weak var glycemiaUnitSegmentControl: UISegmentedControl!
     
-    // MARK: Initial color for segmentcontroll
-    private func initialColorForSegmentControl(segmentControl: UISegmentedControl) {
+    // MARK: Initial style for segmentcontroll
+    private func styleForSegmentControl(segmentControl: UISegmentedControl) {
         let selectedIndex = segmentControl.selectedSegmentIndex
-        
         for i in 0..<segmentControl.subviews.count {
             if selectedIndex == i {
                 view.tintColor = UIColor(red: 92/255, green: 182/255, blue: 214/255, alpha: 1)
             }
         }
+
+        segmentControl.setTitleTextAttributes([NSForegroundColorAttributeName : UIColor.whiteColor()], forState: .Normal)
+        segmentControl.setTitleTextAttributes([NSForegroundColorAttributeName : UIColor.whiteColor()], forState: .Selected)
     }
     
     // MARK: lifecycle
     
     override func viewDidLoad() {
-        initialColorForSegmentControl(weightSegmentControl)
+        styleForSegmentControl(weightSegmentControl)
+        styleForSegmentControl(glycemiaUnitSegmentControl)
     }
 }
 

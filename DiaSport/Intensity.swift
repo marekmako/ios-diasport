@@ -27,10 +27,6 @@ class IntensityViewController: UIViewController {
     }
     
     // MARK: lifecycle
-    
-    override func viewDidLoad() {
-        view.backgroundColor = UIColor(red: 20/255, green: 65/255, blue: 110/255, alpha: 0.9)
-    }
 }
 
 

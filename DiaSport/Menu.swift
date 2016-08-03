@@ -83,8 +83,6 @@ class MenuView: UIView {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
-        backgroundColor = UIColor(red: 92/255, green: 182/255, blue: 214/255, alpha: 1)
-        
         // SETTINGS
         let screenWidth = UIScreen.mainScreen().bounds.width
         let screenHeight = UIScreen.mainScreen().bounds.height

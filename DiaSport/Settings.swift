@@ -11,10 +11,6 @@ import UIKit
 
 class SettingsViewController: UIViewController {
     
-    override func viewDidLoad() {
-         view.backgroundColor = UIColor(red: 20/255, green: 65/255, blue: 110/255, alpha: 0.9)
-    }
-    
     // MARK: IBAction
     
     @IBAction func onCancel() {

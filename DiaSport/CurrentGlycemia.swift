@@ -49,7 +49,7 @@ class CurrentGlycemiaPickerView: CalcPickerView, CalcPickerViewSelectedDataProto
             decimals.append("\(i)")
         }
         
-        return [integers, separator, decimals]
+        return [integers, separator, decimals, ["mmol/l"]]
     }()
     
     private lazy var mgdlData: [[String]] = {
@@ -60,16 +60,42 @@ class CurrentGlycemiaPickerView: CalcPickerView, CalcPickerViewSelectedDataProto
             
             i += 2
         }
-        return [integers]
+        return [integers, ["mg/dl"]]
     }()
     
     override var data: [[String]] {
         switch settings.glycemiaUnit {
         case .Mgdl:
+            
             return mgdlData
 
         case .Mmoll:
             return mmollData
+        }
+    }
+    
+    // MARK: UIPickerViewDelegate
+    
+    func pickerView(pickerView: UIPickerView, widthForComponent component: Int) -> CGFloat {
+        switch settings.glycemiaUnit {
+        case .Mmoll: // 4 prvky
+            let partialWidth: CGFloat = pickerView.bounds.width / 4
+            
+            switch component {
+            case 0:
+                return partialWidth
+            case 1:
+                return partialWidth / 4
+            case 2:
+                return partialWidth
+            case 3:
+                return partialWidth
+            default:
+                return 0.0
+            }
+            
+        case .Mgdl: // 2 prvky
+            return pickerView.bounds.width / 2
         }
     }
     

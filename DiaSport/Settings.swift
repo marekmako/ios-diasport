@@ -19,8 +19,16 @@ class SettingsViewController: UIViewController {
     
     // MARK: IBOutlet
     
-    @IBOutlet weak var weightSegmentControl: UISegmentedControl!
-    @IBOutlet weak var glycemiaUnitSegmentControl: UISegmentedControl!
+    @IBOutlet weak var weightSegmentControl: UISegmentedControl! {
+        didSet {
+            styleForSegmentControl(weightSegmentControl)
+        }
+    }
+    @IBOutlet weak var glycemiaUnitSegmentControl: UISegmentedControl! {
+        didSet {
+            styleForSegmentControl(glycemiaUnitSegmentControl)
+        }
+    }
     
     // MARK: Initial style for segmentcontroll
     private func styleForSegmentControl(segmentControl: UISegmentedControl) {
@@ -36,11 +44,6 @@ class SettingsViewController: UIViewController {
     }
     
     // MARK: lifecycle
-    
-    override func viewDidLoad() {
-        styleForSegmentControl(weightSegmentControl)
-        styleForSegmentControl(glycemiaUnitSegmentControl)
-    }
 }
 
 

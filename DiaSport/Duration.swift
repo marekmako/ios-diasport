@@ -30,10 +30,10 @@ class DurationViewController: UIViewController {
 }
 
 
-class DurationPickerView: CalcPickerView , CalcPickerViewSelectedDataProtocol {
+class DurationPickerView: CalcPickerView, CalcPickerViewSelectedDataProtocol {
     
     override var data: [[String]] {
-        return [["15", "30", "45", "60", "90", "120", "180"]]
+        return [["15", "30", "45", "60", "90", "120", "180"], ["min"]]
     }
     
     // MARK: CalcPickerViewSelectedDataProtocol

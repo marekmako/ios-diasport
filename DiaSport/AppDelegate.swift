@@ -17,7 +17,6 @@ let CALC_STORYBOARD_ID = "calc"
 
 
 
-
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 

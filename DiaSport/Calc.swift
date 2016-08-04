@@ -13,6 +13,7 @@ import UIKit
 class CalcViewController: UIViewController, CalcPickerDataContainerDelegate {
     
     let dataContainer = CalcPickerDataContainer()
+    
     private lazy var calcResult = CalcResult()
     
     // MARK: IBOutlet
@@ -35,7 +36,11 @@ class CalcViewController: UIViewController, CalcPickerDataContainerDelegate {
         }
     }
     
-    @IBOutlet weak var calcButton: UIButton!
+    @IBOutlet weak var calcButton: UIButton! {
+        didSet {
+            calcButton.layer.cornerRadius = 5
+        }
+    }
     
     // MARK: IBAction
     

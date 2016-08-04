@@ -89,7 +89,7 @@ class MenuView: UIView {
         
         // Button Setting
         let buttonWidth: CGFloat = 75
-        let buttonHeight: CGFloat = 55
+        let buttonHeight: CGFloat = 60
         let buttonCenterXPos: CGFloat = ((screenWidth / 2) - (buttonWidth / 2))
         let buttonCenterYPos: CGFloat = ((screenHeight / 2) - (buttonHeight / 2))
         
@@ -101,6 +101,9 @@ class MenuView: UIView {
         let upButtonYPos: CGFloat = (buttonCenterYPos / 5) * 3
         upButton = createButton(CGRectMake(upButtonXPos, upButtonYPos, buttonWidth, buttonHeight), type: .Up)
         addSubview(upButton)
+        upButton.setImage(UIImage(named: "intensity"), forState: .Normal)
+
+        
         // down
         let downButtonXPos: CGFloat = buttonCenterXPos
         let downButtonYPos: CGFloat = ((buttonCenterYPos / 5) * 2) + buttonCenterYPos
@@ -197,16 +200,14 @@ class MenuViewButton: UIButton {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        
+        layer.backgroundColor = UIColor(red: 92/255, green: 182/255, blue: 214/255, alpha: 1).CGColor
+        layer.borderWidth = 3
+        layer.borderColor = UIColor.whiteColor().CGColor
+        layer.cornerRadius = bounds.width / 2.35
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-    }
-    
-    override func drawRect(rect: CGRect) {
-        let path = UIBezierPath(ovalInRect: rect)
-        path.lineWidth = 3.0
-        UIColor.whiteColor().setFill()
-        path.fill()
     }
 }

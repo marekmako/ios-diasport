@@ -412,6 +412,7 @@
                                             <segment title="gram (g)"/>
                                             <segment title="ounce (oz)"/>
                                         </segments>
+                                        <color key="tintColor" red="0.36078431370000003" green="0.71372549019999998" blue="0.83921568629999999" alpha="1" colorSpace="calibratedRGB"/>
                                     </segmentedControl>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WEIGHT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zji-c2-u75">
                                         <rect key="frame" x="96" y="20" width="69" height="21.5"/>
@@ -428,6 +429,7 @@
                                             <segment title="mmol/l"/>
                                             <segment title="mg/dl"/>
                                         </segments>
+                                        <color key="tintColor" red="0.36078431370000003" green="0.71372549019999998" blue="0.83921568629999999" alpha="1" colorSpace="calibratedRGB"/>
                                     </segmentedControl>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UNIT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EFD-ib-dHx">
                                         <rect key="frame" x="98" y="153.5" width="41.5" height="21"/>

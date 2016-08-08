@@ -98,27 +98,27 @@ class MenuView: UIView {
         
         // up
         let upButtonXPos: CGFloat = buttonCenterXPos
-        let upButtonYPos: CGFloat = (buttonCenterYPos / 5) * 3
+        let upButtonYPos: CGFloat = (buttonCenterYPos / 2)
         upButton = createButton(CGRectMake(upButtonXPos, upButtonYPos, buttonWidth, buttonHeight), type: .Up)
-        addSubview(upButton)
         upButton.setImage(UIImage(named: "intensity"), forState: .Normal)
-
-        
+        addSubview(upButton)
         // down
         let downButtonXPos: CGFloat = buttonCenterXPos
-        let downButtonYPos: CGFloat = ((buttonCenterYPos / 5) * 2) + buttonCenterYPos
+        let downButtonYPos: CGFloat = (buttonCenterYPos / 2) + buttonCenterYPos
         downButton = createButton(CGRectMake(downButtonXPos, downButtonYPos, buttonWidth, buttonHeight), type: .Down)
+        downButton.setImage(UIImage(named: "social"), forState: .Normal)
         addSubview(downButton)
         
         // left
-        let leftButtonXPos: CGFloat = buttonCenterXPos / 10
+        let leftButtonXPos: CGFloat = buttonCenterXPos / 15
         let leftButtonYPos: CGFloat = buttonCenterYPos
         leftButton = createButton(CGRectMake(leftButtonXPos, leftButtonYPos, buttonWidth, buttonHeight), type: .Left)
         addSubview(leftButton)
         // right
-        let rightButtonXPos: CGFloat = ((buttonCenterXPos / 10) * 9) + buttonCenterXPos
+        let rightButtonXPos: CGFloat = ((buttonCenterXPos / 15) * 14) + buttonCenterXPos
         let rightButtonYPos: CGFloat = buttonCenterYPos
         rightButton = createButton(CGRectMake(rightButtonXPos, rightButtonYPos, buttonWidth, buttonHeight), type: .Right)
+        rightButton.setImage(UIImage(named: "setting"), forState: .Normal)
         addSubview(rightButton)
         
         // Round Position
@@ -142,13 +142,13 @@ class MenuView: UIView {
         
         // 1.
         let round1 = UIBezierPath(ovalInRect: round1Rect)
-        round1.lineWidth = 3.0
+        round1.lineWidth = 2.0
         UIColor.whiteColor().setStroke()
         round1.stroke()
         
         // 2.
         let round2 = UIBezierPath(ovalInRect: round2Rect)
-        round2.lineWidth = 3.0
+        round2.lineWidth = 2.0
         UIColor.whiteColor().setStroke()
         round2.stroke()
     }
@@ -202,7 +202,7 @@ class MenuViewButton: UIButton {
         super.init(frame: frame)
         
         layer.backgroundColor = UIColor(red: 92/255, green: 182/255, blue: 214/255, alpha: 1).CGColor
-        layer.borderWidth = 3
+        layer.borderWidth = 2
         layer.borderColor = UIColor.whiteColor().CGColor
         layer.cornerRadius = bounds.width / 2.35
     }

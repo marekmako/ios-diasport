@@ -33,7 +33,7 @@ class MenuViewController: UIViewController, MenuViewDelegate {
         presentViewControllerModaly(ctrl)
     }
     
-    func leftButtonDidTouch() { // go to hnowhow
+    func leftButtonDidTouch() { // go to knowhow
         guard let ctrl = storyboard?.instantiateViewControllerWithIdentifier(KNOWHOW_STORYBOARD_ID) else {
             return
         }
@@ -72,10 +72,10 @@ class MenuView: UIView {
     
     var delegate: MenuViewDelegate?
     
-    var upButton: UIButton!
-    var downButton: UIButton!
-    var leftButton: UIButton!
-    var rightButton: UIButton!
+    var upButton = MenuView.CreateButton(type: .Up)
+    var downButton = MenuView.CreateButton(type: .Down)
+    var leftButton = MenuView.CreateButton(type: .Left)
+    var rightButton = MenuView.CreateButton(type: .Right)
     
     var round1Rect: CGRect!
     var round2Rect: CGRect!
@@ -83,6 +83,24 @@ class MenuView: UIView {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
+        upButton.setImage(UIImage(named: "intensity"), forState: .Normal)
+        addTargetToButton(.Up)
+        addSubview(upButton)
+        
+        downButton.setImage(UIImage(named: "social"), forState: .Normal)
+        addTargetToButton(.Down)
+        addSubview(downButton)
+        
+//        leftButton.setImage(UIImage(named: "knowhow"), forState: .Normal)
+        addTargetToButton(.Left)
+        addSubview(leftButton)
+        
+        rightButton.setImage(UIImage(named: "setting"), forState: .Normal)
+        addTargetToButton(.Right)
+        addSubview(rightButton)
+    }
+    
+    override func layoutSubviews() {
         // SETTINGS
         let screenWidth = UIScreen.mainScreen().bounds.width
         let screenHeight = UIScreen.mainScreen().bounds.height
@@ -99,27 +117,29 @@ class MenuView: UIView {
         // up
         let upButtonXPos: CGFloat = buttonCenterXPos
         let upButtonYPos: CGFloat = (buttonCenterYPos / 2)
-        upButton = createButton(CGRectMake(upButtonXPos, upButtonYPos, buttonWidth, buttonHeight), type: .Up)
-        upButton.setImage(UIImage(named: "intensity"), forState: .Normal)
-        addSubview(upButton)
+        upButton.frame = CGRectMake(upButtonXPos, upButtonYPos, buttonWidth, buttonHeight)
+        upButton.layer.cornerRadius = upButton.frame.width / 2.35
+        
         // down
         let downButtonXPos: CGFloat = buttonCenterXPos
         let downButtonYPos: CGFloat = (buttonCenterYPos / 2) + buttonCenterYPos
-        downButton = createButton(CGRectMake(downButtonXPos, downButtonYPos, buttonWidth, buttonHeight), type: .Down)
-        downButton.setImage(UIImage(named: "social"), forState: .Normal)
-        addSubview(downButton)
+        downButton.frame = CGRectMake(downButtonXPos, downButtonYPos, buttonWidth, buttonHeight)
+        downButton.layer.cornerRadius = downButton.frame.width / 2.35
         
+
         // left
         let leftButtonXPos: CGFloat = buttonCenterXPos / 15
         let leftButtonYPos: CGFloat = buttonCenterYPos
-        leftButton = createButton(CGRectMake(leftButtonXPos, leftButtonYPos, buttonWidth, buttonHeight), type: .Left)
-        addSubview(leftButton)
+        leftButton.frame = CGRectMake(leftButtonXPos, leftButtonYPos, buttonWidth, buttonHeight)
+        leftButton.layer.cornerRadius = leftButton.frame.width / 2.35
+        
+        
         // right
         let rightButtonXPos: CGFloat = ((buttonCenterXPos / 15) * 14) + buttonCenterXPos
         let rightButtonYPos: CGFloat = buttonCenterYPos
-        rightButton = createButton(CGRectMake(rightButtonXPos, rightButtonYPos, buttonWidth, buttonHeight), type: .Right)
-        rightButton.setImage(UIImage(named: "setting"), forState: .Normal)
-        addSubview(rightButton)
+        rightButton.frame = CGRectMake(rightButtonXPos, rightButtonYPos, buttonWidth, buttonHeight)
+        rightButton.layer.cornerRadius = rightButton.frame.width / 2.35
+        
         
         // Round Position
         
@@ -155,6 +175,22 @@ class MenuView: UIView {
     
     // MARK: support for MenuViewDelegate protocol
     
+    func addTargetToButton(buttonType: MenuViewButtonTypes) {
+        switch buttonType {
+        case .Up:
+            upButton.addTarget(self, action: #selector(MenuView.upButtonDidTouch), forControlEvents: .TouchUpInside)
+            break
+        case .Down:
+            downButton.addTarget(self, action: #selector(MenuView.downButtonDidTouch), forControlEvents: .TouchUpInside)
+            break
+        case .Left:
+            leftButton.addTarget(self, action: #selector(MenuView.leftButtonDidTouch), forControlEvents: .TouchUpInside)
+            break
+        case .Right:
+            rightButton.addTarget(self, action: #selector(MenuView.rightButtonDidTouch), forControlEvents: .TouchUpInside)
+        }
+    }
+    
     func upButtonDidTouch() {
         delegate?.upButtonDidTouch()
     }
@@ -173,41 +209,13 @@ class MenuView: UIView {
     
     // MARK: Button Factory
     
-    func createButton(frame: CGRect, type: MenuViewButtonTypes) -> MenuViewButton {
-        let button = MenuViewButton(frame: frame)
+    class func CreateButton(type type: MenuViewButtonTypes) -> UIButton {
+        let button = UIButton()
         
-        switch type {
-        case .Up:
-            button.addTarget(self, action: #selector(upButtonDidTouch), forControlEvents: .TouchUpInside)
-            break
-        case .Down:
-            button.addTarget(self, action: #selector(downButtonDidTouch), forControlEvents: .TouchUpInside)
-            break
-        case .Left:
-            button.addTarget(self, action: #selector(leftButtonDidTouch), forControlEvents: .TouchUpInside)
-            break
-        case .Right:
-            button.addTarget(self, action: #selector(rightButtonDidTouch), forControlEvents: .TouchUpInside)
-        }
+        button.layer.backgroundColor = UIColor(red: 92/255, green: 182/255, blue: 214/255, alpha: 1).CGColor
+        button.layer.borderWidth = 2
+        button.layer.borderColor = UIColor.whiteColor().CGColor
         
         return button
-    }
-}
-
-
-
-class MenuViewButton: UIButton {
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        
-        layer.backgroundColor = UIColor(red: 92/255, green: 182/255, blue: 214/255, alpha: 1).CGColor
-        layer.borderWidth = 2
-        layer.borderColor = UIColor.whiteColor().CGColor
-        layer.cornerRadius = bounds.width / 2.35
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
 }

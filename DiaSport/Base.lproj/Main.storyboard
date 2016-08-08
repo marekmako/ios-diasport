@@ -502,7 +502,7 @@
         <!--Social-->
         <scene sceneID="pmh-HE-DaD">
             <objects>
-                <viewController storyboardIdentifier="social" title="Social" id="wV6-Ko-1gU" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="social" title="Social" id="wV6-Ko-1gU" customClass="SocialViewController" customModule="DiaSport" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qIq-3c-Zjq"/>
                         <viewControllerLayoutGuide type="bottom" id="WVH-aV-lVj"/>
@@ -515,14 +515,40 @@
                                 <rect key="frame" x="20" y="28" width="80" height="80"/>
                                 <state key="normal" image="back-arrow"/>
                                 <connections>
-                                    <segue destination="kDH-hJ-UXl" kind="show" id="crs-Xv-7b7"/>
+                                    <action selector="onCancel" destination="wV6-Ko-1gU" eventType="touchUpInside" id="24y-AI-zf1"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SOCIAL SITES" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lhb-kF-Kxn">
+                                <rect key="frame" x="20" y="116" width="560" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Be first who tell about us to other people" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NMh-GQ-kaz">
+                                <rect key="frame" x="20" y="145" width="560" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Utx-Bn-D3o" userLabel="Social View" customClass="SocialView" customModule="DiaSport" customModuleProvider="target">
+                                <rect key="frame" x="20" y="170" width="560" height="410"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.078431372550000003" green="0.25490196079999999" blue="0.43137254899999999" alpha="0.90000000000000002" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstAttribute="leadingMargin" secondItem="Utx-Bn-D3o" secondAttribute="leading" id="2jD-mb-Egn"/>
+                            <constraint firstItem="Utx-Bn-D3o" firstAttribute="top" secondItem="NMh-GQ-kaz" secondAttribute="bottom" constant="8" id="4j0-fp-Xim"/>
                             <constraint firstItem="O5y-06-EdY" firstAttribute="leading" secondItem="AlV-tg-KYU" secondAttribute="leadingMargin" id="Hxt-jt-z7K"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="NMh-GQ-kaz" secondAttribute="leading" id="J4q-zE-XUI"/>
+                            <constraint firstItem="NMh-GQ-kaz" firstAttribute="top" secondItem="Lhb-kF-Kxn" secondAttribute="bottom" constant="8" id="K7r-IE-h9N"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Lhb-kF-Kxn" secondAttribute="trailing" id="LHT-LP-CZY"/>
+                            <constraint firstItem="Lhb-kF-Kxn" firstAttribute="top" secondItem="O5y-06-EdY" secondAttribute="bottom" constant="8" id="S82-Oi-gDm"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="Lhb-kF-Kxn" secondAttribute="leading" id="g4i-rh-r7a"/>
+                            <constraint firstItem="WVH-aV-lVj" firstAttribute="top" secondItem="Utx-Bn-D3o" secondAttribute="bottom" constant="20" id="iZt-QJ-2tG"/>
                             <constraint firstItem="O5y-06-EdY" firstAttribute="top" secondItem="qIq-3c-Zjq" secondAttribute="bottom" constant="8" id="koz-o6-vQf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Utx-Bn-D3o" secondAttribute="trailing" id="pa5-Qw-ErI"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="NMh-GQ-kaz" secondAttribute="trailing" id="zvn-eT-jv0"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -540,6 +566,6 @@
         <image name="weight" width="80" height="80"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="crs-Xv-7b7"/>
+        <segue reference="u7a-fC-Kxr"/>
     </inferredMetricsTieBreakers>
 </document>

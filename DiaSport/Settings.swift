@@ -11,22 +11,37 @@ import UIKit
 
 class SettingsViewController: UIViewController {
     
+    private lazy var userSettings = UserSettings()
+    
     // MARK: IBAction
     
     @IBAction func onCancel() {
         dismissViewControllerAnimated(true, completion: nil)
     }
     
+    @IBAction func onWeightChange(sender: UISegmentedControl) {
+        let weightUnit = WeightUnit(rawValue: sender.selectedSegmentIndex)!
+        userSettings.weightUnit = weightUnit
+    }
+    
+    @IBAction func onGlycemiaUnitChange(sender: UISegmentedControl) {
+        let glycemiaUnit = GlycemiaUnit(rawValue: sender.selectedSegmentIndex)!
+        userSettings.glycemiaUnit = glycemiaUnit
+    }
+    
+    
     // MARK: IBOutlet
     
     @IBOutlet weak var weightSegmentControl: UISegmentedControl! {
         didSet {
             styleForSegmentControl(weightSegmentControl)
+            weightSegmentControl.selectedSegmentIndex = userSettings.weightUnit.rawValue
         }
     }
     @IBOutlet weak var glycemiaUnitSegmentControl: UISegmentedControl! {
         didSet {
             styleForSegmentControl(glycemiaUnitSegmentControl)
+            glycemiaUnitSegmentControl.selectedSegmentIndex = userSettings.glycemiaUnit.rawValue
         }
     }
     
@@ -41,13 +56,13 @@ class SettingsViewController: UIViewController {
 
 
 
-enum WeightUnit {
+enum WeightUnit: Int {
     case Gram, Ounce
 }
 
 
 
-enum GlycemiaUnit {
+enum GlycemiaUnit: Int {
     case Mmoll, Mgdl
 }
 
@@ -56,21 +71,35 @@ enum GlycemiaUnit {
 // TODO: implement
 class UserSettings {
     
+    private let kWeightUnitNameForUserDefaults = "weight_unit"
+    
+    private let kGlycemiaUnitNameForUserDefaults = "glycemia_unit"
+    
+    private let userDefaults = NSUserDefaults.standardUserDefaults()
+    
+    
+    
     var weightUnit: WeightUnit {
         get {
-            return WeightUnit.Gram
+            let userDefaultValue = userDefaults.integerForKey(kWeightUnitNameForUserDefaults)
+            return WeightUnit(rawValue: userDefaultValue)!
         }
         set {
-            
+            let userDefaultValue = newValue.rawValue
+            userDefaults.setInteger(userDefaultValue, forKey: kWeightUnitNameForUserDefaults)
+            userDefaults.synchronize()
         }
     }
     
     var glycemiaUnit: GlycemiaUnit {
         get {
-            return GlycemiaUnit.Mmoll
+            let userDefaultValue = userDefaults.integerForKey(kGlycemiaUnitNameForUserDefaults)
+            return GlycemiaUnit(rawValue: userDefaultValue)!
         }
         set {
-            
+            let userDefaultValue = newValue.rawValue
+            userDefaults.setInteger(userDefaultValue, forKey: kGlycemiaUnitNameForUserDefaults)
+            userDefaults.synchronize()
         }
     }
 }

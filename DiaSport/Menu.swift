@@ -27,10 +27,14 @@ class MenuViewController: UIViewController, MenuViewDelegate {
     }
     
     func downButtonDidTouch() { // go to social
-        guard let ctrl = storyboard?.instantiateViewControllerWithIdentifier(SOCIAL_STORYBOARD_ID) else {
-            return
-        }
-        presentViewControllerModaly(ctrl)
+//        guard let ctrl = storyboard?.instantiateViewControllerWithIdentifier(SOCIAL_STORYBOARD_ID) else {
+//            return
+//        }
+//        presentViewControllerModaly(ctrl)
+        
+        let activityVC = UIActivityViewController(activityItems: [SHARE_MESSAGE], applicationActivities: nil)
+        
+        presentViewController(activityVC, animated: true, completion: nil)
     }
     
     func leftButtonDidTouch() { // go to knowhow

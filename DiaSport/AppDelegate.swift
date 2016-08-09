@@ -16,6 +16,9 @@ let SOCIAL_STORYBOARD_ID = "social"
 let CALC_STORYBOARD_ID = "calc"
 
 
+let SHARE_MESSAGE = "https://itunes.apple.com/us/app/diabetes-sport-carbs/id959308155?mt=8"
+
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

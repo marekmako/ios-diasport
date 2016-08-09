@@ -7,9 +7,13 @@
 //
 
 import UIKit
+import Social
 
 
 class SocialViewController: UIViewController, SocialViewDelegate {
+    
+    let textForTwitter = "Some text for twitter"
+    let textForFacebook = "Some text for facebook"
     
     // MARK: IBAction
     
@@ -28,7 +32,46 @@ class SocialViewController: UIViewController, SocialViewDelegate {
     // MARK: SocialViewDelegate
     
     func onTwitterShare() {
-        print("onTwitterShare")
+        if SLComposeViewController.isAvailableForServiceType(SLServiceTypeTwitter) {
+            let viewController = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
+            
+            viewController.setInitialText(textForTwitter)
+            
+            presentViewController(viewController, animated: true, completion: nil)
+            
+        } else {
+            showSocialAlert("You are not logged in to your Twitter account.")
+        }
+    }
+    
+    func onFacebookShare() {
+        if SLComposeViewController.isAvailableForServiceType(SLServiceTypeFacebook) {
+            let viewController = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
+            
+            viewController.setInitialText(textForFacebook)
+            
+            presentViewController(viewController, animated: true, completion: nil)
+            
+        } else {
+            showSocialAlert("You are not connected to your Facebook account.")
+        }
+    }
+    
+    func onGoogleShare() {
+        showSocialAlert("Google+ is not available now.")
+    }
+    
+    func onPinterestShare() {
+        showSocialAlert("Pinterest is not available now.")
+    }
+    
+    // MARK: methods
+    
+    private func showSocialAlert(message: String) {
+        let alert = UIAlertController(title: "Info 💩", message: message, preferredStyle: .Alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .Destructive, handler: nil))
+        
+        presentViewController(alert, animated: true, completion: nil)
     }
 }
 

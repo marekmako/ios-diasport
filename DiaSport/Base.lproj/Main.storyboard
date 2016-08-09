@@ -551,6 +551,9 @@
                             <constraint firstAttribute="trailingMargin" secondItem="NMh-GQ-kaz" secondAttribute="trailing" id="zvn-eT-jv0"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="socialView" destination="Utx-Bn-D3o" id="QOA-BW-nPL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bNJ-mH-1Ix" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

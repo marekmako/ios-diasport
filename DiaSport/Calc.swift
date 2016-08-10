@@ -64,9 +64,9 @@ class CalcViewController: UIViewController, CalcPickerDataContainerDelegate {
         
         let result = calcResult.get(durationIndex: durationDataIndex, intensityIndex: intensityDataIndex, currentGlycemiaIndex: currentGlycemiaDataIndex)
         
-        let alertCtrl = UIAlertController(title: "test", message: result, preferredStyle: .ActionSheet)
-        alertCtrl.addAction(UIAlertAction(title: "OK", style: .Cancel, handler: nil))
-        presentViewController(alertCtrl, animated: true, completion: nil)
+//        let alertCtrl = UIAlertController(title: "test", message: result, preferredStyle: .ActionSheet)
+//        alertCtrl.addAction(UIAlertAction(title: "OK", style: .Cancel, handler: nil))
+//        presentViewController(alertCtrl, animated: true, completion: nil)
     }
     
     // MARK: lifecycle
@@ -97,6 +97,35 @@ class CalcViewController: UIViewController, CalcPickerDataContainerDelegate {
     
     func currentGlycemiaValueChanged(value: String) {
         currentGlycemiaButton.setTitle(value, forState: .Normal)
+    }
+    
+    // MARK: Navigation
+    
+    override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
+        if identifier == "toCalcResultViewController" {
+            guard (dataContainer.durationDataIndex != nil) else {
+                dataIncomplete()
+                return false
+            }
+            guard (dataContainer.intensityDataIndex != nil) else {
+                dataIncomplete()
+                return false
+            }
+            guard  (dataContainer.currentGlycemiaDataIndex != nil) else {
+                dataIncomplete()
+                return false
+            }
+        }
+        
+        return true
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let calcResultVC = segue.destinationViewController as? CalcResultViewController {
+            calcResultVC.durationIndex = dataContainer.durationDataIndex
+            calcResultVC.intentsityIndex = dataContainer.intensityDataIndex
+            calcResultVC.currentGlycemiaIndex = dataContainer.currentGlycemiaDataIndex
+        }
     }
 }
 
@@ -345,5 +374,61 @@ class CalcResult {
     func get(durationIndex durationIndex: Int, intensityIndex: Int, currentGlycemiaIndex: Int) -> String {
         let weightUnitIndex: Int = (userSettings.weightUnit == .Gram ? 1 : 0)
         return data[durationIndex][intensityIndex][weightUnitIndex][currentGlycemiaIndex]
+    }
+}
+
+
+
+class CalcResultViewController: UIViewController {
+    
+    let calcResult = CalcResult()
+    let userWightUnit = UserSettings().weightUnit
+    
+    var durationIndex: Int?
+    var intentsityIndex: Int?
+    var currentGlycemiaIndex: Int?
+    
+    
+    // MARK: IBOutlets
+    
+    @IBOutlet weak var resultView: UIView! {
+        didSet {
+            resultView.layer.cornerRadius = 10
+        }
+    }
+    @IBOutlet weak var resultValueLabel: UILabel!
+    @IBOutlet weak var unitLabel: UILabel!
+    @IBOutlet weak var cancelButton: UIButton! {
+        didSet {
+            cancelButton.layer.borderWidth = 1
+            cancelButton.layer.borderColor = UIColor.whiteColor().CGColor
+            cancelButton.layer.cornerRadius = 5
+        }
+    }
+    
+    
+    
+    // MARK: IBAction
+    
+    @IBAction func onCancel() {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    // MARK: lifecycle
+    
+    override func viewDidLoad() {
+        // TODO: ak som neprisiel zo segue hodnoty nebudu nastavene, fatal error
+        guard durationIndex != nil else {
+            fatalError("bol VC volany zo segue, kde som nastavil durationIndex?")
+        }
+        guard intentsityIndex != nil else {
+            fatalError("bol VC volany zo segue, kde som nastavil intentsityIndex?")
+        }
+        guard currentGlycemiaIndex != nil else {
+            fatalError("bol VC volany zo segue, kde som nastavil currentGlycemiaIndex?")
+        }
+        
+        resultValueLabel.text = calcResult.get(durationIndex: durationIndex!, intensityIndex: intentsityIndex!, currentGlycemiaIndex: currentGlycemiaIndex!)
+        unitLabel.text = userWightUnit.describe()
     }
 }

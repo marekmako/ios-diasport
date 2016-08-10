@@ -58,12 +58,30 @@ class SettingsViewController: UIViewController {
 
 enum WeightUnit: Int {
     case Gram, Ounce
+    
+    func describe() -> String {
+        switch self {
+        case .Gram:
+            return "gram (g)"
+        case .Ounce:
+            return "ounce (oz)"
+        }
+    }
 }
 
 
 
 enum GlycemiaUnit: Int {
     case Mmoll, Mgdl
+    
+    func describe() -> String {
+        switch self {
+        case .Mgdl:
+            return "mg/dl"
+        case .Mmoll:
+            return "mmol/l"
+        }
+    }
 }
 
 

@@ -48,27 +48,6 @@ class CalcViewController: UIViewController, CalcPickerDataContainerDelegate {
         dismissViewControllerAnimated(true, completion: nil)
     }
     
-    @IBAction func onCalculate() {
-        guard let durationDataIndex = dataContainer.durationDataIndex else {
-            dataIncomplete()
-            return
-        }
-        guard let intensityDataIndex = dataContainer.intensityDataIndex else {
-            dataIncomplete()
-            return
-        }
-        guard let currentGlycemiaDataIndex = dataContainer.currentGlycemiaDataIndex else {
-            dataIncomplete()
-            return
-        }
-        
-        let result = calcResult.get(durationIndex: durationDataIndex, intensityIndex: intensityDataIndex, currentGlycemiaIndex: currentGlycemiaDataIndex)
-        
-//        let alertCtrl = UIAlertController(title: "test", message: result, preferredStyle: .ActionSheet)
-//        alertCtrl.addAction(UIAlertAction(title: "OK", style: .Cancel, handler: nil))
-//        presentViewController(alertCtrl, animated: true, completion: nil)
-    }
-    
     // MARK: lifecycle
     
     override func viewDidLoad() {

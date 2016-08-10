@@ -14,8 +14,6 @@ class CalcViewController: UIViewController, CalcPickerDataContainerDelegate {
     
     let dataContainer = CalcPickerDataContainer()
     
-    private lazy var calcResult = CalcResult()
-    
     // MARK: IBOutlet
     
     @IBOutlet weak var durationButton: UIButton! {

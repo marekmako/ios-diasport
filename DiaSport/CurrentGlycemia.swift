@@ -56,9 +56,9 @@ class CurrentGlycemiaPickerView: CalcPickerView, CalcPickerViewSelectedDataProto
         var integers = [String]()
         
         for var i in 54..<271 {
-            integers.append("\(i)")
-            
-            i += 2
+            if i % 2 == 0 {
+                integers.append("\(i)")
+            }
         }
         return [integers, ["mg/dl"]]
     }()

@@ -76,10 +76,10 @@ class MenuView: UIView {
     
     var delegate: MenuViewDelegate?
     
-    var upButton = MenuView.CreateButton(type: .Up)
-    var downButton = MenuView.CreateButton(type: .Down)
-    var leftButton = MenuView.CreateButton(type: .Left)
-    var rightButton = MenuView.CreateButton(type: .Right)
+    var upButton = MenuView.CreateButton()
+    var downButton = MenuView.CreateButton()
+    var leftButton = MenuView.CreateButton()
+    var rightButton = MenuView.CreateButton()
     
     var round1Rect: CGRect!
     var round2Rect: CGRect!
@@ -213,7 +213,7 @@ class MenuView: UIView {
     
     // MARK: Button Factory
     
-    class func CreateButton(type type: MenuViewButtonTypes) -> UIButton {
+    class func CreateButton() -> UIButton {
         let button = UIButton()
         
         button.layer.backgroundColor = UIColor(red: 92/255, green: 182/255, blue: 214/255, alpha: 1).CGColor

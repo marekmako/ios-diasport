@@ -82,14 +82,10 @@ class CurrentGlycemiaPickerView: CalcPickerView, CalcPickerViewSelectedDataProto
             let partialWidth: CGFloat = pickerView.bounds.width / 4
             
             switch component {
-            case 0:
+            case 0, 2, 3:
                 return partialWidth
             case 1:
                 return partialWidth / 4
-            case 2:
-                return partialWidth
-            case 3:
-                return partialWidth
             default:
                 return 0.0
             }

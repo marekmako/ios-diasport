@@ -10,6 +10,7 @@ import UIKit
 import Social
 
 
+/// MenuView.downButtonDidTouch() spusta nahradu UIActivityViewController
 class SocialViewController: UIViewController, SocialViewDelegate {
     
     let textForTwitter = "Some text for twitter"

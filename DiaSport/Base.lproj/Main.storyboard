@@ -97,7 +97,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cUF-gg-5MA">
-                                <rect key="frame" x="20" y="166" width="560" height="268"/>
+                                <rect key="frame" x="20" y="151" width="560" height="298"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calc_duration" translatesAutoresizingMaskIntoConstraints="NO" id="vDt-G7-doX">
                                         <rect key="frame" x="8" y="8" width="64" height="64"/>
@@ -109,16 +109,16 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GLYCEMIA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Iv-bs-abI">
-                                        <rect key="frame" x="80" y="196" width="157.5" height="22"/>
+                                        <rect key="frame" x="80" y="226" width="157.5" height="22"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calc_drop" translatesAutoresizingMaskIntoConstraints="NO" id="mUB-Ia-dxL">
-                                        <rect key="frame" x="8" y="196" width="64" height="64"/>
+                                        <rect key="frame" x="8" y="226" width="64" height="64"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="your current blood sugar level" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hjr-3w-FE5">
-                                        <rect key="frame" x="80" y="227" width="157.5" height="33"/>
+                                        <rect key="frame" x="80" y="257" width="157.5" height="33"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -131,7 +131,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Did-5A-C4m">
-                                        <rect key="frame" x="454" y="196" width="98" height="64"/>
+                                        <rect key="frame" x="454" y="226" width="98" height="64"/>
                                         <state key="normal" title="Button" image="calc_right_arrow"/>
                                         <connections>
                                             <segue destination="unr-mQ-yMe" kind="presentation" modalPresentationStyle="overFullScreen" id="LbA-Lu-Qld"/>
@@ -144,23 +144,23 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="INTENSITY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V1Q-G8-XKd">
-                                        <rect key="frame" x="80" y="102" width="157.5" height="21"/>
+                                        <rect key="frame" x="80" y="117" width="157.5" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calc_runner" translatesAutoresizingMaskIntoConstraints="NO" id="bMX-Pt-qHH">
-                                        <rect key="frame" x="8" y="102" width="64" height="64"/>
+                                        <rect key="frame" x="8" y="117" width="64" height="64"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eGf-Si-6AQ">
-                                        <rect key="frame" x="454" y="102" width="98" height="64"/>
+                                        <rect key="frame" x="454" y="117" width="98" height="64"/>
                                         <state key="normal" title="Button" image="calc_right_arrow"/>
                                         <connections>
                                             <segue destination="Kjt-0e-m2H" kind="presentation" modalPresentationStyle="overFullScreen" id="7IZ-o3-Kh1"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="intensity of your sport activity" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="42e-Hh-jMx">
-                                        <rect key="frame" x="80" y="132" width="157.5" height="34"/>
+                                        <rect key="frame" x="80" y="147" width="157.5" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -172,7 +172,9 @@
                                     <constraint firstItem="7se-TQ-tIg" firstAttribute="width" secondItem="bai-y7-TEV" secondAttribute="width" id="1C8-h8-w1e"/>
                                     <constraint firstItem="7se-TQ-tIg" firstAttribute="leading" secondItem="vDt-G7-doX" secondAttribute="trailing" constant="8" id="24b-5l-YQv"/>
                                     <constraint firstItem="42e-Hh-jMx" firstAttribute="bottom" secondItem="eGf-Si-6AQ" secondAttribute="bottom" id="8rZ-gI-2kg"/>
+                                    <constraint firstItem="bMX-Pt-qHH" firstAttribute="top" secondItem="vDt-G7-doX" secondAttribute="bottom" constant="8" id="Apd-Di-0O4"/>
                                     <constraint firstAttribute="bottom" secondItem="mUB-Ia-dxL" secondAttribute="bottom" constant="8" id="ENg-s3-0eM"/>
+                                    <constraint firstItem="mUB-Ia-dxL" firstAttribute="top" secondItem="bMX-Pt-qHH" secondAttribute="bottom" constant="8" id="HKa-Z7-rf2"/>
                                     <constraint firstItem="7se-TQ-tIg" firstAttribute="top" secondItem="bai-y7-TEV" secondAttribute="bottom" constant="8" id="J49-wY-2TZ"/>
                                     <constraint firstAttribute="trailing" secondItem="eGf-Si-6AQ" secondAttribute="trailing" constant="8" id="J6O-QW-SUc"/>
                                     <constraint firstItem="7se-TQ-tIg" firstAttribute="bottom" secondItem="9gs-d6-7JM" secondAttribute="bottom" id="Jeb-18-g47"/>
@@ -194,21 +196,35 @@
                                     <constraint firstItem="hjr-3w-FE5" firstAttribute="bottom" secondItem="Did-5A-C4m" secondAttribute="bottom" id="gtL-vf-qpo"/>
                                     <constraint firstItem="6Iv-bs-abI" firstAttribute="top" secondItem="Did-5A-C4m" secondAttribute="top" id="lx5-CM-yK3"/>
                                     <constraint firstItem="bai-y7-TEV" firstAttribute="top" secondItem="9gs-d6-7JM" secondAttribute="top" id="nwM-Vd-FUk"/>
-                                    <constraint firstItem="bMX-Pt-qHH" firstAttribute="top" secondItem="vDt-G7-doX" secondAttribute="bottom" constant="30" id="pxz-9f-vLW"/>
+                                    <constraint firstItem="bMX-Pt-qHH" firstAttribute="top" secondItem="vDt-G7-doX" secondAttribute="bottom" constant="45" id="pxz-9f-vLW"/>
                                     <constraint firstItem="vDt-G7-doX" firstAttribute="leading" secondItem="cUF-gg-5MA" secondAttribute="leading" constant="8" id="q2J-HI-i6f"/>
                                     <constraint firstItem="vDt-G7-doX" firstAttribute="top" secondItem="cUF-gg-5MA" secondAttribute="top" constant="8" id="qsc-v2-uyz"/>
                                     <constraint firstItem="mUB-Ia-dxL" firstAttribute="leading" secondItem="cUF-gg-5MA" secondAttribute="leading" constant="8" id="sRb-VD-vvH"/>
                                     <constraint firstItem="V1Q-G8-XKd" firstAttribute="top" secondItem="eGf-Si-6AQ" secondAttribute="top" id="tud-DC-5bO"/>
                                     <constraint firstAttribute="trailing" secondItem="9gs-d6-7JM" secondAttribute="trailing" constant="8" id="uTP-u1-tIq"/>
-                                    <constraint firstItem="mUB-Ia-dxL" firstAttribute="top" secondItem="bMX-Pt-qHH" secondAttribute="bottom" constant="30" id="vlR-OC-Crc"/>
+                                    <constraint firstItem="mUB-Ia-dxL" firstAttribute="top" secondItem="bMX-Pt-qHH" secondAttribute="bottom" constant="45" id="vlR-OC-Crc"/>
                                     <constraint firstItem="6Iv-bs-abI" firstAttribute="leading" secondItem="mUB-Ia-dxL" secondAttribute="trailing" constant="8" id="vsE-0O-JjI"/>
                                     <constraint firstItem="hjr-3w-FE5" firstAttribute="leading" secondItem="mUB-Ia-dxL" secondAttribute="trailing" constant="8" id="wgL-5a-m0L"/>
                                     <constraint firstItem="eGf-Si-6AQ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="42e-Hh-jMx" secondAttribute="trailing" constant="8" id="xdP-lG-idL"/>
                                     <constraint firstItem="bai-y7-TEV" firstAttribute="top" secondItem="vDt-G7-doX" secondAttribute="top" id="xuJ-xo-Kvg"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Apd-Di-0O4"/>
+                                        <exclude reference="HKa-Z7-rf2"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="Apd-Di-0O4"/>
+                                        <exclude reference="pxz-9f-vLW"/>
+                                        <include reference="HKa-Z7-rf2"/>
+                                        <exclude reference="vlR-OC-Crc"/>
+                                    </mask>
+                                </variation>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ufp-uR-4nH">
-                                <rect key="frame" x="225" y="450" width="150" height="36"/>
+                                <rect key="frame" x="225" y="465" width="150" height="36"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.71372549019999998" blue="0.83921568629999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="oYO-pS-7gj"/>
@@ -228,12 +244,31 @@
                             <constraint firstItem="cUF-gg-5MA" firstAttribute="trailing" secondItem="0xf-cp-Mbc" secondAttribute="trailingMargin" id="6mh-rU-8xF"/>
                             <constraint firstItem="Ufp-uR-4nH" firstAttribute="centerX" secondItem="0xf-cp-Mbc" secondAttribute="centerX" id="BgB-oK-yAq"/>
                             <constraint firstItem="T1G-11-vCn" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Ufp-uR-4nH" secondAttribute="bottom" constant="10" id="Ej9-cz-Fw7"/>
+                            <constraint firstItem="cUF-gg-5MA" firstAttribute="top" relation="greaterThanOrEqual" secondItem="JdJ-Nh-nqd" secondAttribute="bottom" id="FnO-Vu-uRY"/>
                             <constraint firstAttribute="leadingMargin" secondItem="JdJ-Nh-nqd" secondAttribute="leading" id="Z47-cZ-MUU"/>
                             <constraint firstItem="cUF-gg-5MA" firstAttribute="centerY" secondItem="0xf-cp-Mbc" secondAttribute="centerY" id="aO4-jN-xvh"/>
                             <constraint firstItem="JdJ-Nh-nqd" firstAttribute="top" secondItem="rSd-ad-uPv" secondAttribute="bottom" constant="8" id="oQB-WY-DeG"/>
+                            <constraint firstItem="Ufp-uR-4nH" firstAttribute="top" secondItem="cUF-gg-5MA" secondAttribute="bottom" constant="8" id="uGg-21-lhB"/>
                             <constraint firstItem="Ufp-uR-4nH" firstAttribute="top" secondItem="cUF-gg-5MA" secondAttribute="bottom" constant="16" id="vas-Fj-o5N"/>
                             <constraint firstItem="cUF-gg-5MA" firstAttribute="leading" secondItem="0xf-cp-Mbc" secondAttribute="leadingMargin" id="xIE-O2-nxv"/>
+                            <constraint firstItem="T1G-11-vCn" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Ufp-uR-4nH" secondAttribute="bottom" constant="8" id="zeu-mh-BSN"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="FnO-Vu-uRY"/>
+                                <exclude reference="uGg-21-lhB"/>
+                                <exclude reference="zeu-mh-BSN"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="FnO-Vu-uRY"/>
+                                <include reference="uGg-21-lhB"/>
+                                <exclude reference="vas-Fj-o5N"/>
+                                <exclude reference="Ej9-cz-Fw7"/>
+                                <include reference="zeu-mh-BSN"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="calcButton" destination="Ufp-uR-4nH" id="VId-eC-mAf"/>

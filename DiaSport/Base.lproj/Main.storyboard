@@ -621,7 +621,9 @@
                             <constraint firstItem="alZ-hB-lTp" firstAttribute="centerX" secondItem="Rub-rJ-BNi" secondAttribute="centerX" id="O2F-Y2-sWR"/>
                             <constraint firstItem="alZ-hB-lTp" firstAttribute="centerY" secondItem="Rub-rJ-BNi" secondAttribute="centerY" id="Tlg-ml-AiZ"/>
                             <constraint firstItem="rF8-Ch-v8N" firstAttribute="leading" secondItem="Rub-rJ-BNi" secondAttribute="leadingMargin" id="jPv-Yp-rDH"/>
-                            <constraint firstItem="alZ-hB-lTp" firstAttribute="top" secondItem="Y06-cl-2F7" secondAttribute="bottom" constant="32" id="pjl-01-5vs"/>
+                            <constraint firstItem="alZ-hB-lTp" firstAttribute="top" secondItem="Y06-cl-2F7" secondAttribute="bottom" constant="32" id="pjl-01-5vs">
+                                <variation key="heightClass=compact-widthClass=compact" constant="16"/>
+                            </constraint>
                         </constraints>
                     </view>
                     <connections>

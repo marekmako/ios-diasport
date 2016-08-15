@@ -294,8 +294,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A7K-vy-gdQ">
-                                <rect key="frame" x="20" y="28" width="80" height="80"/>
-                                <state key="normal" image="back-arrow"/>
+                                <rect key="frame" x="20" y="28" width="44" height="44"/>
+                                <state key="normal" image="duration_arrow_left"/>
                                 <connections>
                                     <action selector="onCancel:" destination="105-JV-FZa" eventType="touchUpInside" id="DLS-bU-Bkx"/>
                                 </connections>
@@ -419,8 +419,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NeT-BL-B6W">
-                                <rect key="frame" x="20" y="28" width="80" height="80"/>
-                                <state key="normal" image="back-arrow"/>
+                                <rect key="frame" x="20" y="28" width="44" height="44"/>
+                                <state key="normal" image="intensity_arrow_left"/>
                                 <connections>
                                     <action selector="onCancel" destination="Kjt-0e-m2H" eventType="touchUpInside" id="vwS-nz-3dg"/>
                                 </connections>
@@ -458,8 +458,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FNo-xf-hzr">
-                                <rect key="frame" x="20" y="28" width="80" height="80"/>
-                                <state key="normal" image="back-arrow"/>
+                                <rect key="frame" x="20" y="28" width="44" height="44"/>
+                                <state key="normal" image="currentglycemia_arrow_left"/>
                                 <connections>
                                     <action selector="onCancel" destination="unr-mQ-yMe" eventType="touchUpInside" id="6PC-0y-jU4"/>
                                 </connections>
@@ -689,6 +689,9 @@
         <image name="calc_duration" width="64" height="64"/>
         <image name="calc_right_arrow" width="44" height="44"/>
         <image name="calc_runner" width="64" height="64"/>
+        <image name="currentglycemia_arrow_left" width="44" height="44"/>
+        <image name="duration_arrow_left" width="44" height="44"/>
+        <image name="intensity_arrow_left" width="44" height="44"/>
         <image name="setting_arrow_left" width="44" height="44"/>
         <image name="setting_syringe" width="64" height="64"/>
         <image name="setting_weight" width="64" height="64"/>

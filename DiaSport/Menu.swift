@@ -87,19 +87,19 @@ class MenuView: UIView {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
-        upButton.setImage(UIImage(named: "intensity"), forState: .Normal)
+        upButton.setBackgroundImage(UIImage(named: "menu_runner"), forState: .Normal)
         addTargetToButton(.Up)
         addSubview(upButton)
         
-        downButton.setImage(UIImage(named: "social"), forState: .Normal)
+        downButton.setBackgroundImage(UIImage(named: "menu_social"), forState: .Normal)
         addTargetToButton(.Down)
         addSubview(downButton)
         
-//        leftButton.setImage(UIImage(named: "knowhow"), forState: .Normal)
+        leftButton.setBackgroundImage(UIImage(named: "menu_help"), forState: .Normal)
         addTargetToButton(.Left)
         addSubview(leftButton)
         
-        rightButton.setImage(UIImage(named: "setting"), forState: .Normal)
+        rightButton.setBackgroundImage(UIImage(named: "menu_setting"), forState: .Normal)
         addTargetToButton(.Right)
         addSubview(rightButton)
     }
@@ -110,8 +110,8 @@ class MenuView: UIView {
         let screenHeight = UIScreen.mainScreen().bounds.height
         
         // Button Setting
-        let buttonWidth: CGFloat = 75
-        let buttonHeight: CGFloat = 60
+        let buttonWidth: CGFloat = 50
+        let buttonHeight: CGFloat = 50
         let buttonCenterXPos: CGFloat = ((screenWidth / 2) - (buttonWidth / 2))
         let buttonCenterYPos: CGFloat = ((screenHeight / 2) - (buttonHeight / 2))
         
@@ -166,13 +166,13 @@ class MenuView: UIView {
         
         // 1.
         let round1 = UIBezierPath(ovalInRect: round1Rect)
-        round1.lineWidth = 2.0
+        round1.lineWidth = 2.5
         UIColor.whiteColor().setStroke()
         round1.stroke()
         
         // 2.
         let round2 = UIBezierPath(ovalInRect: round2Rect)
-        round2.lineWidth = 2.0
+        round2.lineWidth = 2.5
         UIColor.whiteColor().setStroke()
         round2.stroke()
     }
@@ -217,8 +217,8 @@ class MenuView: UIView {
         let button = UIButton()
         
         button.layer.backgroundColor = UIColor(red: 92/255, green: 182/255, blue: 214/255, alpha: 1).CGColor
-        button.layer.borderWidth = 2
-        button.layer.borderColor = UIColor.whiteColor().CGColor
+//        button.layer.borderWidth = 2.5
+//        button.layer.borderColor = UIColor.whiteColor().CGColor
         
         return button
     }

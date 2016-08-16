@@ -80,7 +80,7 @@
         <!--Calc-->
         <scene sceneID="2Ht-FV-6An">
             <objects>
-                <viewController storyboardIdentifier="calc" title="Calc" id="KyQ-TF-28T" customClass="CalcViewController" customModule="DiaSport" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="calc" title="Calc" id="KyQ-TF-28T" customClass="CalcViewController" customModule="Diactive" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rSd-ad-uPv"/>
                         <viewControllerLayoutGuide type="bottom" id="T1G-11-vCn"/>
@@ -296,7 +296,7 @@
         <!--Duration View Controller-->
         <scene sceneID="HVR-59-lea">
             <objects>
-                <viewController id="105-JV-FZa" customClass="DurationViewController" customModule="DiaSport" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="105-JV-FZa" customClass="DurationViewController" customModule="Diactive" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xNp-Jp-jHP"/>
                         <viewControllerLayoutGuide type="bottom" id="bws-eT-AxW"/>
@@ -312,7 +312,7 @@
                                     <action selector="onCancel:" destination="105-JV-FZa" eventType="touchUpInside" id="DLS-bU-Bkx"/>
                                 </connections>
                             </button>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eQf-q8-YB3" customClass="DurationPickerView" customModule="DiaSport" customModuleProvider="target">
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eQf-q8-YB3" customClass="DurationPickerView" customModule="Diactive" customModuleProvider="target">
                                 <rect key="frame" x="140" y="192" width="320" height="216"/>
                             </pickerView>
                         </subviews>
@@ -335,7 +335,7 @@
         <!--Calc Result-->
         <scene sceneID="wQ4-TL-5yQ">
             <objects>
-                <viewController id="78Y-gH-Yzb" userLabel="Calc Result" customClass="CalcResultViewController" customModule="DiaSport" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="78Y-gH-Yzb" userLabel="Calc Result" customClass="CalcResultViewController" customModule="Diactive" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7fX-MG-n92"/>
                         <viewControllerLayoutGuide type="bottom" id="O3d-rv-pW7"/>
@@ -421,7 +421,7 @@
         <!--Intensity View Controller-->
         <scene sceneID="4kj-nW-Mst">
             <objects>
-                <viewController id="Kjt-0e-m2H" customClass="IntensityViewController" customModule="DiaSport" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Kjt-0e-m2H" customClass="IntensityViewController" customModule="Diactive" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="FiG-B1-WE0"/>
                         <viewControllerLayoutGuide type="bottom" id="fMu-6F-wgZ"/>
@@ -437,7 +437,7 @@
                                     <action selector="onCancel" destination="Kjt-0e-m2H" eventType="touchUpInside" id="vwS-nz-3dg"/>
                                 </connections>
                             </button>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wIg-Nw-wFO" customClass="IntensityPickerView" customModule="DiaSport" customModuleProvider="target">
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wIg-Nw-wFO" customClass="IntensityPickerView" customModule="Diactive" customModuleProvider="target">
                                 <rect key="frame" x="140" y="192" width="320" height="216"/>
                             </pickerView>
                         </subviews>
@@ -460,7 +460,7 @@
         <!--Current Glycemia Controller View-->
         <scene sceneID="4HP-kb-J1m">
             <objects>
-                <viewController id="unr-mQ-yMe" customClass="CurrentGlycemiaControllerView" customModule="DiaSport" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="unr-mQ-yMe" customClass="CurrentGlycemiaControllerView" customModule="Diactive" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="RNW-5y-bh3"/>
                         <viewControllerLayoutGuide type="bottom" id="YtA-Xa-9tT"/>
@@ -476,7 +476,7 @@
                                     <action selector="onCancel" destination="unr-mQ-yMe" eventType="touchUpInside" id="6PC-0y-jU4"/>
                                 </connections>
                             </button>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dQl-iu-A6w" customClass="CurrentGlycemiaPickerView" customModule="DiaSport" customModuleProvider="target">
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dQl-iu-A6w" customClass="CurrentGlycemiaPickerView" customModule="Diactive" customModuleProvider="target">
                                 <rect key="frame" x="140" y="192" width="320" height="216"/>
                             </pickerView>
                         </subviews>
@@ -499,12 +499,12 @@
         <!--Menu-->
         <scene sceneID="fb0-ba-QGY">
             <objects>
-                <viewController storyboardIdentifier="menu" title="Menu" id="kDH-hJ-UXl" customClass="MenuViewController" customModule="DiaSport" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="menu" title="Menu" id="kDH-hJ-UXl" customClass="MenuViewController" customModule="Diactive" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="oIb-Hf-bm8"/>
                         <viewControllerLayoutGuide type="bottom" id="O0W-MS-Iqg"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Zdu-Te-LMa" customClass="MenuView" customModule="DiaSport" customModuleProvider="target">
+                    <view key="view" contentMode="scaleToFill" id="Zdu-Te-LMa" customClass="MenuView" customModule="Diactive" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.36078431370000003" green="0.71372549019999998" blue="0.83921568629999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -517,7 +517,7 @@
         <!--Settings-->
         <scene sceneID="C3e-La-dbG">
             <objects>
-                <viewController storyboardIdentifier="settings" title="Settings" id="gBH-vf-Mgg" customClass="SettingsViewController" customModule="DiaSport" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="settings" title="Settings" id="gBH-vf-Mgg" customClass="SettingsViewController" customModule="Diactive" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Xn5-CA-VoK"/>
                         <viewControllerLayoutGuide type="bottom" id="82Y-t7-qgK"/>
@@ -587,7 +587,6 @@
                                     <constraint firstItem="sAm-HH-fNI" firstAttribute="top" secondItem="EFD-ib-dHx" secondAttribute="top" id="5HK-9F-p5D"/>
                                     <constraint firstItem="sMs-HK-OaS" firstAttribute="leading" secondItem="EFD-ib-dHx" secondAttribute="leading" id="Afm-4f-xQF"/>
                                     <constraint firstItem="vbH-Ey-H6i" firstAttribute="bottom" secondItem="XHF-MI-i9w" secondAttribute="bottom" id="Fb9-wJ-1sw"/>
-                                    <constraint firstAttribute="width" constant="237" id="HRD-fu-Jfh"/>
                                     <constraint firstItem="Zji-c2-u75" firstAttribute="leading" secondItem="vbH-Ey-H6i" secondAttribute="trailing" constant="32" id="QkP-bG-sic"/>
                                     <constraint firstItem="sAm-HH-fNI" firstAttribute="top" secondItem="vbH-Ey-H6i" secondAttribute="bottom" constant="50" id="STf-dZ-KiH"/>
                                     <constraint firstItem="sAm-HH-fNI" firstAttribute="bottom" secondItem="sMs-HK-OaS" secondAttribute="bottom" id="ZN9-wR-3rW"/>
@@ -600,11 +599,6 @@
                                     <constraint firstAttribute="bottom" secondItem="sAm-HH-fNI" secondAttribute="bottom" constant="20" id="yxB-gK-Xya"/>
                                     <constraint firstAttribute="bottom" secondItem="sMs-HK-OaS" secondAttribute="bottom" constant="20" id="zDW-K0-zup"/>
                                 </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="HRD-fu-Jfh"/>
-                                    </mask>
-                                </variation>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your preference settings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y06-cl-2F7">
                                 <rect key="frame" x="221" y="147.5" width="159" height="17"/>
@@ -638,7 +632,7 @@
         <!--Social-->
         <scene sceneID="pmh-HE-DaD">
             <objects>
-                <viewController storyboardIdentifier="social" title="Social" id="wV6-Ko-1gU" customClass="SocialViewController" customModule="DiaSport" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="social" title="Social" id="wV6-Ko-1gU" customClass="SocialViewController" customModule="Diactive" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qIq-3c-Zjq"/>
                         <viewControllerLayoutGuide type="bottom" id="WVH-aV-lVj"/>
@@ -666,7 +660,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Utx-Bn-D3o" userLabel="Social View" customClass="SocialView" customModule="DiaSport" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Utx-Bn-D3o" userLabel="Social View" customClass="SocialView" customModule="Diactive" customModuleProvider="target">
                                 <rect key="frame" x="20" y="170" width="560" height="410"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>

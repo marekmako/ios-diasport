@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "20D5BC7E1D49D44200EF0E2D"
-               BuildableName = "DiaSport.app"
-               BlueprintName = "DiaSport"
-               ReferencedContainer = "container:DiaSport.xcodeproj">
+               BuildableName = "Diactive.app"
+               BlueprintName = "Diactive"
+               ReferencedContainer = "container:Diactive.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "20D5BC921D49D44300EF0E2D"
-               BuildableName = "DiaSportTests.xctest"
-               BlueprintName = "DiaSportTests"
-               ReferencedContainer = "container:DiaSport.xcodeproj">
+               BuildableName = "Diactive.xctest"
+               BlueprintName = "DiactiveTests"
+               ReferencedContainer = "container:Diactive.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -43,9 +43,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "20D5BC7E1D49D44200EF0E2D"
-            BuildableName = "DiaSport.app"
-            BlueprintName = "DiaSport"
-            ReferencedContainer = "container:DiaSport.xcodeproj">
+            BuildableName = "Diactive.app"
+            BlueprintName = "Diactive"
+            ReferencedContainer = "container:Diactive.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -66,9 +66,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "20D5BC7E1D49D44200EF0E2D"
-            BuildableName = "DiaSport.app"
-            BlueprintName = "DiaSport"
-            ReferencedContainer = "container:DiaSport.xcodeproj">
+            BuildableName = "Diactive.app"
+            BlueprintName = "Diactive"
+            ReferencedContainer = "container:Diactive.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -85,9 +85,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "20D5BC7E1D49D44200EF0E2D"
-            BuildableName = "DiaSport.app"
-            BlueprintName = "DiaSport"
-            ReferencedContainer = "container:DiaSport.xcodeproj">
+            BuildableName = "Diactive.app"
+            BlueprintName = "Diactive"
+            ReferencedContainer = "container:Diactive.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

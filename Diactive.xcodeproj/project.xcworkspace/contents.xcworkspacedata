@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:DiaSport.xcodeproj">
+      location = "self:/Users/maki/Documents/ios/DiaSport/Diactive.xcodeproj">
    </FileRef>
 </Workspace>

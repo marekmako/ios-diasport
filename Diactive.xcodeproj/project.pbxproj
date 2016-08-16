@@ -39,13 +39,13 @@
 		206F0E021D4F6ED400F9F420 /* Duration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Duration.swift; sourceTree = "<group>"; };
 		206F0E041D4FBA3100F9F420 /* Intensity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Intensity.swift; sourceTree = "<group>"; };
 		206F0E061D4FBF8900F9F420 /* CurrentGlycemia.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentGlycemia.swift; sourceTree = "<group>"; };
-		20D5BC7F1D49D44200EF0E2D /* DiaSport.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DiaSport.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		20D5BC7F1D49D44200EF0E2D /* Diactive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Diactive.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20D5BC821D49D44200EF0E2D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		20D5BC871D49D44300EF0E2D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		20D5BC891D49D44300EF0E2D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		20D5BC8C1D49D44300EF0E2D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		20D5BC8E1D49D44300EF0E2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		20D5BC931D49D44300EF0E2D /* DiaSportTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DiaSportTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		20D5BC931D49D44300EF0E2D /* Diactive.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Diactive.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		20D5BC971D49D44300EF0E2D /* DiaSportTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaSportTests.swift; sourceTree = "<group>"; };
 		20D5BC991D49D44300EF0E2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		20D5BCAA1D49DB9600EF0E2D /* Menu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
@@ -84,8 +84,8 @@
 		20D5BC801D49D44200EF0E2D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				20D5BC7F1D49D44200EF0E2D /* DiaSport.app */,
-				20D5BC931D49D44300EF0E2D /* DiaSportTests.xctest */,
+				20D5BC7F1D49D44200EF0E2D /* Diactive.app */,
+				20D5BC931D49D44300EF0E2D /* Diactive.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -121,9 +121,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		20D5BC7E1D49D44200EF0E2D /* DiaSport */ = {
+		20D5BC7E1D49D44200EF0E2D /* Diactive */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 20D5BC9C1D49D44300EF0E2D /* Build configuration list for PBXNativeTarget "DiaSport" */;
+			buildConfigurationList = 20D5BC9C1D49D44300EF0E2D /* Build configuration list for PBXNativeTarget "Diactive" */;
 			buildPhases = (
 				20D5BC7B1D49D44200EF0E2D /* Sources */,
 				20D5BC7C1D49D44200EF0E2D /* Frameworks */,
@@ -133,14 +133,14 @@
 			);
 			dependencies = (
 			);
-			name = DiaSport;
+			name = Diactive;
 			productName = DiaSport;
-			productReference = 20D5BC7F1D49D44200EF0E2D /* DiaSport.app */;
+			productReference = 20D5BC7F1D49D44200EF0E2D /* Diactive.app */;
 			productType = "com.apple.product-type.application";
 		};
-		20D5BC921D49D44300EF0E2D /* DiaSportTests */ = {
+		20D5BC921D49D44300EF0E2D /* DiactiveTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 20D5BC9F1D49D44300EF0E2D /* Build configuration list for PBXNativeTarget "DiaSportTests" */;
+			buildConfigurationList = 20D5BC9F1D49D44300EF0E2D /* Build configuration list for PBXNativeTarget "DiactiveTests" */;
 			buildPhases = (
 				20D5BC8F1D49D44300EF0E2D /* Sources */,
 				20D5BC901D49D44300EF0E2D /* Frameworks */,
@@ -151,9 +151,9 @@
 			dependencies = (
 				20D5BC951D49D44300EF0E2D /* PBXTargetDependency */,
 			);
-			name = DiaSportTests;
+			name = DiactiveTests;
 			productName = DiaSportTests;
-			productReference = 20D5BC931D49D44300EF0E2D /* DiaSportTests.xctest */;
+			productReference = 20D5BC931D49D44300EF0E2D /* Diactive.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -176,7 +176,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 20D5BC7A1D49D44200EF0E2D /* Build configuration list for PBXProject "DiaSport" */;
+			buildConfigurationList = 20D5BC7A1D49D44200EF0E2D /* Build configuration list for PBXProject "Diactive" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -189,8 +189,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				20D5BC7E1D49D44200EF0E2D /* DiaSport */,
-				20D5BC921D49D44300EF0E2D /* DiaSportTests */,
+				20D5BC7E1D49D44200EF0E2D /* Diactive */,
+				20D5BC921D49D44300EF0E2D /* DiactiveTests */,
 			);
 		};
 /* End PBXProject section */
@@ -244,7 +244,7 @@
 /* Begin PBXTargetDependency section */
 		20D5BC951D49D44300EF0E2D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 20D5BC7E1D49D44200EF0E2D /* DiaSport */;
+			target = 20D5BC7E1D49D44200EF0E2D /* Diactive */;
 			targetProxy = 20D5BC941D49D44300EF0E2D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -360,8 +360,8 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = DiaSport/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.marekmako.DiaSport;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.marekmako.Diactive;
+				PRODUCT_NAME = Diactive;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -374,8 +374,8 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = DiaSport/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.marekmako.DiaSport;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.marekmako.Diactive;
+				PRODUCT_NAME = Diactive;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -387,8 +387,8 @@
 				INFOPLIST_FILE = DiaSportTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.marekmako.DiaSportTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DiaSport.app/DiaSport";
+				PRODUCT_NAME = Diactive;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Diactive.app/Diactive";
 			};
 			name = Debug;
 		};
@@ -399,15 +399,15 @@
 				INFOPLIST_FILE = DiaSportTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.marekmako.DiaSportTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DiaSport.app/DiaSport";
+				PRODUCT_NAME = Diactive;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Diactive.app/Diactive";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		20D5BC7A1D49D44200EF0E2D /* Build configuration list for PBXProject "DiaSport" */ = {
+		20D5BC7A1D49D44200EF0E2D /* Build configuration list for PBXProject "Diactive" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				20D5BC9A1D49D44300EF0E2D /* Debug */,
@@ -416,7 +416,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		20D5BC9C1D49D44300EF0E2D /* Build configuration list for PBXNativeTarget "DiaSport" */ = {
+		20D5BC9C1D49D44300EF0E2D /* Build configuration list for PBXNativeTarget "Diactive" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				20D5BC9D1D49D44300EF0E2D /* Debug */,
@@ -425,7 +425,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		20D5BC9F1D49D44300EF0E2D /* Build configuration list for PBXNativeTarget "DiaSportTests" */ = {
+		20D5BC9F1D49D44300EF0E2D /* Build configuration list for PBXNativeTarget "DiactiveTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				20D5BCA01D49D44300EF0E2D /* Debug */,

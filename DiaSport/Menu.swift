@@ -110,8 +110,8 @@ class MenuView: UIView {
         let screenHeight = UIScreen.mainScreen().bounds.height
         
         // Button Setting
-        let buttonWidth: CGFloat = 50
-        let buttonHeight: CGFloat = 50
+        let buttonWidth: CGFloat = 85
+        let buttonHeight: CGFloat = 70
         let buttonCenterXPos: CGFloat = ((screenWidth / 2) - (buttonWidth / 2))
         let buttonCenterYPos: CGFloat = ((screenHeight / 2) - (buttonHeight / 2))
         
@@ -132,14 +132,14 @@ class MenuView: UIView {
         
 
         // left
-        let leftButtonXPos: CGFloat = buttonCenterXPos / 8
+        let leftButtonXPos: CGFloat = buttonCenterXPos / 15
         let leftButtonYPos: CGFloat = buttonCenterYPos
         leftButton.frame = CGRectMake(leftButtonXPos, leftButtonYPos, buttonWidth, buttonHeight)
         leftButton.layer.cornerRadius = leftButton.frame.width / 2.35
         
         
         // right
-        let rightButtonXPos: CGFloat = ((buttonCenterXPos / 8) * 7) + buttonCenterXPos
+        let rightButtonXPos: CGFloat = ((buttonCenterXPos / 15) * 14) + buttonCenterXPos
         let rightButtonYPos: CGFloat = buttonCenterYPos
         rightButton.frame = CGRectMake(rightButtonXPos, rightButtonYPos, buttonWidth, buttonHeight)
         rightButton.layer.cornerRadius = rightButton.frame.width / 2.35
@@ -148,8 +148,8 @@ class MenuView: UIView {
         // Round Position
         
         // 1.
-        let round1Width: CGFloat = (rightButtonXPos - leftButtonXPos) + (buttonWidth / 2)
-        let round1Height: CGFloat = (downButtonYPos - upButtonYPos) - (buttonHeight / 3)
+        let round1Width: CGFloat = (rightButtonXPos - leftButtonXPos) + (buttonWidth / 3)
+        let round1Height: CGFloat = (downButtonYPos - upButtonYPos) - (buttonHeight / 4)
         let round1XPos: CGFloat = (screenWidth / 2) - (round1Width / 2)
         let round1YPos: CGFloat = (screenHeight / 2) - (round1Height / 2)
         round1Rect = CGRectMake(round1XPos, round1YPos, round1Width, round1Height)
@@ -166,13 +166,13 @@ class MenuView: UIView {
         
         // 1.
         let round1 = UIBezierPath(ovalInRect: round1Rect)
-        round1.lineWidth = 3
+        round1.lineWidth = 2
         UIColor.whiteColor().setStroke()
         round1.stroke()
         
         // 2.
         let round2 = UIBezierPath(ovalInRect: round2Rect)
-        round2.lineWidth = 3
+        round2.lineWidth = 2
         UIColor.whiteColor().setStroke()
         round2.stroke()
     }

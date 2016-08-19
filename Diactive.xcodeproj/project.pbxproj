@@ -75,8 +75,8 @@
 			isa = PBXGroup;
 			children = (
 				2037CF6C1D5A0DBE00453688 /* Social.framework */,
-				20D5BC811D49D44200EF0E2D /* DiaSport */,
-				20D5BC961D49D44300EF0E2D /* DiaSportTests */,
+				20D5BC811D49D44200EF0E2D /* Diactive */,
+				20D5BC961D49D44300EF0E2D /* DiactiveTests */,
 				20D5BC801D49D44200EF0E2D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -90,7 +90,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		20D5BC811D49D44200EF0E2D /* DiaSport */ = {
+		20D5BC811D49D44200EF0E2D /* Diactive */ = {
 			isa = PBXGroup;
 			children = (
 				20D5BC821D49D44200EF0E2D /* AppDelegate.swift */,
@@ -106,15 +106,17 @@
 				206F0E061D4FBF8900F9F420 /* CurrentGlycemia.swift */,
 				20FDDA261D588FA300D3A540 /* Social.swift */,
 			);
+			name = Diactive;
 			path = DiaSport;
 			sourceTree = "<group>";
 		};
-		20D5BC961D49D44300EF0E2D /* DiaSportTests */ = {
+		20D5BC961D49D44300EF0E2D /* DiactiveTests */ = {
 			isa = PBXGroup;
 			children = (
 				20D5BC971D49D44300EF0E2D /* DiaSportTests.swift */,
 				20D5BC991D49D44300EF0E2D /* Info.plist */,
 			);
+			name = DiactiveTests;
 			path = DiaSportTests;
 			sourceTree = "<group>";
 		};
@@ -360,7 +362,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = DiaSport/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.marekmako.Diactive;
+				PRODUCT_BUNDLE_IDENTIFIER = com.marekmako.diactive;
 				PRODUCT_NAME = Diactive;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -374,7 +376,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = DiaSport/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.marekmako.Diactive;
+				PRODUCT_BUNDLE_IDENTIFIER = com.marekmako.diactive;
 				PRODUCT_NAME = Diactive;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

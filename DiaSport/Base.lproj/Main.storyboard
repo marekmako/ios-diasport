@@ -9,7 +9,7 @@
         <!--Welcome-->
         <scene sceneID="K0a-z6-GIn">
             <objects>
-                <viewController title="Welcome" id="OQp-LW-fl5" sceneMemberID="viewController">
+                <viewController title="Welcome" id="OQp-LW-fl5" customClass="WelcomeViewController" customModule="Diactive" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="JRd-Go-OVR"/>
                         <viewControllerLayoutGuide type="bottom" id="GX2-jG-E3s"/>
@@ -18,6 +18,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="welcome_back" translatesAutoresizingMaskIntoConstraints="NO" id="jbP-ED-tHa">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XCm-Lo-l72">
                                 <rect key="frame" x="511" y="550" width="69" height="30"/>
                                 <state key="normal" title="Start Now"/>
@@ -33,14 +36,21 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="jbP-ED-tHa" firstAttribute="leading" secondItem="Uia-VB-iPD" secondAttribute="leading" id="1ML-NE-Sey"/>
+                            <constraint firstItem="GX2-jG-E3s" firstAttribute="top" secondItem="jbP-ED-tHa" secondAttribute="bottom" id="9d0-R8-AJ3"/>
+                            <constraint firstAttribute="trailing" secondItem="jbP-ED-tHa" secondAttribute="trailing" id="Oba-xe-dhm"/>
                             <constraint firstItem="GX2-jG-E3s" firstAttribute="top" secondItem="Rma-Gd-Fjq" secondAttribute="bottom" constant="20" id="P3J-yX-E9C"/>
                             <constraint firstAttribute="leadingMargin" secondItem="Rma-Gd-Fjq" secondAttribute="leading" id="V1R-fV-yBT"/>
                             <constraint firstAttribute="trailingMargin" secondItem="XCm-Lo-l72" secondAttribute="trailing" id="hZz-qI-C4s"/>
                             <constraint firstItem="GX2-jG-E3s" firstAttribute="top" secondItem="XCm-Lo-l72" secondAttribute="bottom" constant="20" id="iGk-Yx-gLm"/>
+                            <constraint firstItem="jbP-ED-tHa" firstAttribute="top" secondItem="Uia-VB-iPD" secondAttribute="top" id="oXx-vw-MIN"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="backgroundImage" destination="jbP-ED-tHa" id="zM3-9P-MJ2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Waj-nV-P8A" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -120,16 +130,28 @@
                                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <nil key="highlightedColor"/>
+                                                                <variation key="heightClass=compact-widthClass=compact" misplaced="YES">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="154" height="21"/>
+                                                                </variation>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="time of your plannig physical activity" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7se-TQ-tIg">
                                                                 <rect key="frame" x="0.0" y="21" width="192" height="43"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <nil key="highlightedColor"/>
+                                                                <variation key="heightClass=compact-widthClass=compact" misplaced="YES">
+                                                                    <rect key="frame" x="0.0" y="21" width="154" height="43"/>
+                                                                </variation>
                                                             </label>
                                                         </subviews>
+                                                        <variation key="heightClass=compact-widthClass=compact" misplaced="YES">
+                                                            <rect key="frame" x="74" y="0.0" width="154" height="64"/>
+                                                        </variation>
                                                     </stackView>
                                                 </subviews>
+                                                <variation key="heightClass=compact-widthClass=compact" misplaced="YES">
+                                                    <rect key="frame" x="0.0" y="0.0" width="228" height="64"/>
+                                                </variation>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9gs-d6-7JM">
                                                 <rect key="frame" x="462" y="0.0" width="98" height="64"/>
@@ -161,16 +183,40 @@
                                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <nil key="highlightedColor"/>
+                                                                <variation key="heightClass=compact" misplaced="YES">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="158" height="22"/>
+                                                                </variation>
+                                                                <variation key="heightClass=compact-widthClass=compact" misplaced="YES">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="158" height="22"/>
+                                                                </variation>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="751" misplaced="YES" text="intensity of your sport activity" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="42e-Hh-jMx">
                                                                 <rect key="frame" x="0.0" y="22" width="158" height="43"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <nil key="highlightedColor"/>
+                                                                <variation key="heightClass=compact" misplaced="YES">
+                                                                    <rect key="frame" x="0.0" y="22" width="158" height="43"/>
+                                                                </variation>
+                                                                <variation key="heightClass=compact-widthClass=compact" misplaced="YES">
+                                                                    <rect key="frame" x="0.0" y="22" width="158" height="43"/>
+                                                                </variation>
                                                             </label>
                                                         </subviews>
+                                                        <variation key="heightClass=compact" misplaced="YES">
+                                                            <rect key="frame" x="74" y="0.0" width="158" height="64"/>
+                                                        </variation>
+                                                        <variation key="heightClass=compact-widthClass=compact" misplaced="YES">
+                                                            <rect key="frame" x="74" y="0.0" width="158" height="64"/>
+                                                        </variation>
                                                     </stackView>
                                                 </subviews>
+                                                <variation key="heightClass=compact" misplaced="YES">
+                                                    <rect key="frame" x="0.0" y="0.0" width="232" height="64"/>
+                                                </variation>
+                                                <variation key="heightClass=compact-widthClass=compact" misplaced="YES">
+                                                    <rect key="frame" x="0.0" y="0.0" width="232" height="64"/>
+                                                </variation>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eGf-Si-6AQ">
                                                 <rect key="frame" x="462" y="0.0" width="98" height="64"/>
@@ -202,16 +248,40 @@
                                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <nil key="highlightedColor"/>
+                                                                <variation key="heightClass=compact" misplaced="YES">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="158" height="22"/>
+                                                                </variation>
+                                                                <variation key="heightClass=compact-widthClass=compact" misplaced="YES">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="158" height="22"/>
+                                                                </variation>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="247" misplaced="YES" text="your current blood sugar level" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hjr-3w-FE5">
                                                                 <rect key="frame" x="0.0" y="22" width="158" height="43"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <nil key="highlightedColor"/>
+                                                                <variation key="heightClass=compact" misplaced="YES">
+                                                                    <rect key="frame" x="0.0" y="22" width="158" height="43"/>
+                                                                </variation>
+                                                                <variation key="heightClass=compact-widthClass=compact" misplaced="YES">
+                                                                    <rect key="frame" x="0.0" y="22" width="158" height="43"/>
+                                                                </variation>
                                                             </label>
                                                         </subviews>
+                                                        <variation key="heightClass=compact" misplaced="YES">
+                                                            <rect key="frame" x="74" y="0.0" width="158" height="64"/>
+                                                        </variation>
+                                                        <variation key="heightClass=compact-widthClass=compact" misplaced="YES">
+                                                            <rect key="frame" x="74" y="0.0" width="158" height="64"/>
+                                                        </variation>
                                                     </stackView>
                                                 </subviews>
+                                                <variation key="heightClass=compact" misplaced="YES">
+                                                    <rect key="frame" x="0.0" y="0.0" width="232" height="64"/>
+                                                </variation>
+                                                <variation key="heightClass=compact-widthClass=compact" misplaced="YES">
+                                                    <rect key="frame" x="0.0" y="0.0" width="232" height="64"/>
+                                                </variation>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Did-5A-C4m">
                                                 <rect key="frame" x="462" y="0.0" width="98" height="64"/>
@@ -683,6 +753,7 @@
         <image name="setting_arrow_left" width="44" height="44"/>
         <image name="setting_syringe" width="64" height="64"/>
         <image name="setting_weight" width="64" height="64"/>
+        <image name="welcome_back" width="750" height="1334"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="u7a-fC-Kxr"/>

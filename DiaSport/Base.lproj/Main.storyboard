@@ -293,6 +293,7 @@
                                         </subviews>
                                     </stackView>
                                 </subviews>
+                                <variation key="heightClass=compact-widthClass=compact" spacing="8"/>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ufp-uR-4nH">
                                 <rect key="frame" x="225" y="434" width="150" height="36"/>
@@ -312,6 +313,7 @@
                         </subviews>
                         <color key="backgroundColor" red="0.078431372550000003" green="0.25490196079999999" blue="0.43137254899999999" alpha="0.90000000000000002" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="LKZ-EC-jul" firstAttribute="top" relation="greaterThanOrEqual" secondItem="JdJ-Nh-nqd" secondAttribute="bottom" id="2YI-mB-sDp"/>
                             <constraint firstAttribute="trailingMargin" secondItem="LKZ-EC-jul" secondAttribute="trailing" id="4de-rW-gvb"/>
                             <constraint firstItem="LKZ-EC-jul" firstAttribute="centerY" secondItem="0xf-cp-Mbc" secondAttribute="centerY" id="Q0P-qJ-X1I"/>
                             <constraint firstAttribute="leadingMargin" secondItem="JdJ-Nh-nqd" secondAttribute="leading" id="Z47-cZ-MUU"/>
@@ -323,11 +325,13 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="2YI-mB-sDp"/>
                                 <exclude reference="zeu-mh-BSN"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact-widthClass=compact">
                             <mask key="constraints">
+                                <include reference="2YI-mB-sDp"/>
                                 <include reference="zeu-mh-BSN"/>
                             </mask>
                         </variation>

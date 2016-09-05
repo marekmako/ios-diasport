@@ -13,6 +13,7 @@
 		206F0E031D4F6ED400F9F420 /* Duration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206F0E021D4F6ED400F9F420 /* Duration.swift */; };
 		206F0E051D4FBA3100F9F420 /* Intensity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206F0E041D4FBA3100F9F420 /* Intensity.swift */; };
 		206F0E071D4FBF8900F9F420 /* CurrentGlycemia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206F0E061D4FBF8900F9F420 /* CurrentGlycemia.swift */; };
+		2077B76E1D76C0D800155842 /* Welcome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2077B76D1D76C0D800155842 /* Welcome.swift */; };
 		20D5BC831D49D44200EF0E2D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D5BC821D49D44200EF0E2D /* AppDelegate.swift */; };
 		20D5BC881D49D44300EF0E2D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20D5BC861D49D44300EF0E2D /* Main.storyboard */; };
 		20D5BC8A1D49D44300EF0E2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20D5BC891D49D44300EF0E2D /* Assets.xcassets */; };
@@ -39,6 +40,7 @@
 		206F0E021D4F6ED400F9F420 /* Duration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Duration.swift; sourceTree = "<group>"; };
 		206F0E041D4FBA3100F9F420 /* Intensity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Intensity.swift; sourceTree = "<group>"; };
 		206F0E061D4FBF8900F9F420 /* CurrentGlycemia.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentGlycemia.swift; sourceTree = "<group>"; };
+		2077B76D1D76C0D800155842 /* Welcome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Welcome.swift; sourceTree = "<group>"; };
 		20D5BC7F1D49D44200EF0E2D /* Diactive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Diactive.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20D5BC821D49D44200EF0E2D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		20D5BC871D49D44300EF0E2D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -75,8 +77,8 @@
 			isa = PBXGroup;
 			children = (
 				2037CF6C1D5A0DBE00453688 /* Social.framework */,
-				20D5BC811D49D44200EF0E2D /* DiaSport */,
-				20D5BC961D49D44300EF0E2D /* DiaSportTests */,
+				20D5BC811D49D44200EF0E2D /* Diactive */,
+				20D5BC961D49D44300EF0E2D /* DiactiveTests */,
 				20D5BC801D49D44200EF0E2D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -90,7 +92,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		20D5BC811D49D44200EF0E2D /* DiaSport */ = {
+		20D5BC811D49D44200EF0E2D /* Diactive */ = {
 			isa = PBXGroup;
 			children = (
 				20D5BC821D49D44200EF0E2D /* AppDelegate.swift */,
@@ -105,16 +107,19 @@
 				206F0E041D4FBA3100F9F420 /* Intensity.swift */,
 				206F0E061D4FBF8900F9F420 /* CurrentGlycemia.swift */,
 				20FDDA261D588FA300D3A540 /* Social.swift */,
+				2077B76D1D76C0D800155842 /* Welcome.swift */,
 			);
+			name = Diactive;
 			path = DiaSport;
 			sourceTree = "<group>";
 		};
-		20D5BC961D49D44300EF0E2D /* DiaSportTests */ = {
+		20D5BC961D49D44300EF0E2D /* DiactiveTests */ = {
 			isa = PBXGroup;
 			children = (
 				20D5BC971D49D44300EF0E2D /* DiaSportTests.swift */,
 				20D5BC991D49D44300EF0E2D /* Info.plist */,
 			);
+			name = DiactiveTests;
 			path = DiaSportTests;
 			sourceTree = "<group>";
 		};
@@ -221,6 +226,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				206F0E031D4F6ED400F9F420 /* Duration.swift in Sources */,
+				2077B76E1D76C0D800155842 /* Welcome.swift in Sources */,
 				206F0E051D4FBA3100F9F420 /* Intensity.swift in Sources */,
 				20FDDA271D588FA300D3A540 /* Social.swift in Sources */,
 				206F0E011D4A270C00F9F420 /* Calc.swift in Sources */,
@@ -360,7 +366,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = DiaSport/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.marekmako.Diactive;
+				PRODUCT_BUNDLE_IDENTIFIER = com.marekmako.diactive;
 				PRODUCT_NAME = Diactive;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -374,7 +380,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = DiaSport/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.marekmako.Diactive;
+				PRODUCT_BUNDLE_IDENTIFIER = com.marekmako.diactive;
 				PRODUCT_NAME = Diactive;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

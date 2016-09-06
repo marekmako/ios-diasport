@@ -366,7 +366,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = DiaSport/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.marekmako.diactive;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.marekmako.iDia-Sport";
 				PRODUCT_NAME = Diactive;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -380,7 +380,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = DiaSport/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.marekmako.diactive;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.marekmako.iDia-Sport";
 				PRODUCT_NAME = Diactive;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="OQp-LW-fl5">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -32,7 +31,7 @@
                                 <rect key="frame" x="20" y="550" width="96" height="30"/>
                                 <state key="normal" title="How To Do It?"/>
                                 <connections>
-                                    <segue destination="LW3-Vp-Xky" kind="show" id="9c9-YB-NPz"/>
+                                    <segue destination="LW3-Vp-Xky" kind="presentation" modalPresentationStyle="overCurrentContext" id="9c9-YB-NPz"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -56,10 +55,10 @@
             </objects>
             <point key="canvasLocation" x="-75" y="229"/>
         </scene>
-        <!--KnowHow-->
+        <!--HowTo-->
         <scene sceneID="wvE-s1-1E0">
             <objects>
-                <viewController storyboardIdentifier="knowhow" title="KnowHow" id="LW3-Vp-Xky" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="knowhow" title="HowTo" id="LW3-Vp-Xky" customClass="HowToViewController" customModule="Diactive" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="BeL-8u-Ptc"/>
                         <viewControllerLayoutGuide type="bottom" id="KKu-wj-Blj"/>
@@ -69,19 +68,64 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lFX-CV-P4i">
-                                <rect key="frame" x="20" y="28" width="80" height="80"/>
-                                <state key="normal" image="back-arrow"/>
+                                <rect key="frame" x="20" y="28" width="44" height="44"/>
+                                <state key="normal" image="howto_arrow_left"/>
                                 <connections>
-                                    <segue destination="kDH-hJ-UXl" kind="show" id="bFJ-i6-Dtr"/>
+                                    <action selector="onCancel" destination="LW3-Vp-Xky" eventType="touchUpInside" id="Wns-cA-NCR"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" indicatorStyle="white" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SL0-Mb-WlA">
+                                <rect key="frame" x="20" y="80" width="560" height="500"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">Diabetes Sport Carbs helps prevent the occurrence of hypoglycemic episode by sporting activities. Is very suitable for use of children (use of app under the supervision of an adult person) and adults patient with Diabetes Melitus Type 1 (DM1), who are taken insulin dose.
+
+The application works on the base of the following infomations:
+- lenght of exercise
+- intensity of sport activity
+- actual value of blood sugar level
+
+Result of this calculation easily help you to find out how many carbs you need consume before or during sport activity.
+
+Application was developed by results of study Dr. S. Colberg, which are long term assistant of sports doctors with accurate sports benefits of carbs to replenish glucose before and during physical activity of diabetes patients.
+
+SAFETY INFORMATION
+Diabetes sport carbs is intended for guidance only and is not a substitute for professional medical advice. Always discuss use of the calculator with your diabetes educator or physician and only use personal settings agreed with them. 
+
+WE ARE VERY OPEN FOR ANY YOUR SUGGESTIONS AND COMMENTS
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="18" name="HelveticaNeue-Thin"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="If you have any suggestions or questions about this app, pls sent me an email: marekmako@gmail.com">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="18" name="HelveticaNeue-Thin"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" address="YES"/>
+                            </textView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.078431372550000003" green="0.25490196079999999" blue="0.43137254899999999" alpha="0.90000000000000002" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="KKu-wj-Blj" firstAttribute="top" secondItem="SL0-Mb-WlA" secondAttribute="bottom" constant="20" id="5qa-Db-5w0"/>
+                            <constraint firstItem="SL0-Mb-WlA" firstAttribute="leading" secondItem="hNo-g3-PdY" secondAttribute="leadingMargin" id="Cce-9o-bf6"/>
+                            <constraint firstItem="SL0-Mb-WlA" firstAttribute="trailing" secondItem="hNo-g3-PdY" secondAttribute="trailingMargin" id="Hrc-YE-x32"/>
                             <constraint firstItem="lFX-CV-P4i" firstAttribute="leading" secondItem="hNo-g3-PdY" secondAttribute="leadingMargin" id="KtS-R8-oUC"/>
+                            <constraint firstItem="SL0-Mb-WlA" firstAttribute="top" secondItem="lFX-CV-P4i" secondAttribute="bottom" constant="8" id="ciE-5G-E2q"/>
                             <constraint firstItem="lFX-CV-P4i" firstAttribute="top" secondItem="BeL-8u-Ptc" secondAttribute="bottom" constant="8" id="tnd-yM-w47"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="textView" destination="SL0-Mb-WlA" id="CBV-Rx-oLq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sW4-5Y-1cr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -624,7 +668,7 @@
                                             </stackView>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="72D-1F-szn">
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="72D-1F-szn">
                                         <rect key="frame" x="0.0" y="94" width="243" height="64"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="setting_syringe" translatesAutoresizingMaskIntoConstraints="NO" id="sAm-HH-fNI">
@@ -634,16 +678,16 @@
                                                     <constraint firstAttribute="width" constant="64" id="jwn-hh-Kad"/>
                                                 </constraints>
                                             </imageView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="5Nw-2f-Jjq">
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="5Nw-2f-Jjq">
                                                 <rect key="frame" x="84" y="0.0" width="159" height="64"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="UNIT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EFD-ib-dHx">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UNIT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EFD-ib-dHx">
                                                         <rect key="frame" x="0.0" y="0.0" width="159" height="32"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="sMs-HK-OaS">
+                                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="sMs-HK-OaS">
                                                         <rect key="frame" x="0.0" y="32" width="159" height="33"/>
                                                         <segments>
                                                             <segment title="mmol/l"/>
@@ -751,13 +795,11 @@
         <image name="calc_runner" width="64" height="64"/>
         <image name="currentglycemia_arrow_left" width="44" height="44"/>
         <image name="duration_arrow_left" width="44" height="44"/>
+        <image name="howto_arrow_left" width="44" height="44"/>
         <image name="intensity_arrow_left" width="44" height="44"/>
         <image name="setting_arrow_left" width="44" height="44"/>
         <image name="setting_syringe" width="64" height="64"/>
         <image name="setting_weight" width="64" height="64"/>
         <image name="welcome_back" width="750" height="1334"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="u7a-fC-Kxr"/>
-    </inferredMetricsTieBreakers>
 </document>

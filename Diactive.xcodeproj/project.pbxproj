@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2037CF6D1D5A0DBE00453688 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2037CF6C1D5A0DBE00453688 /* Social.framework */; };
+		206EA3071D7EB23C00B8DEE4 /* HowTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206EA3061D7EB23C00B8DEE4 /* HowTo.swift */; };
 		206F0DFF1D49FE5400F9F420 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206F0DFE1D49FE5400F9F420 /* Settings.swift */; };
 		206F0E011D4A270C00F9F420 /* Calc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206F0E001D4A270C00F9F420 /* Calc.swift */; };
 		206F0E031D4F6ED400F9F420 /* Duration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206F0E021D4F6ED400F9F420 /* Duration.swift */; };
@@ -35,6 +36,7 @@
 
 /* Begin PBXFileReference section */
 		2037CF6C1D5A0DBE00453688 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		206EA3061D7EB23C00B8DEE4 /* HowTo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HowTo.swift; sourceTree = "<group>"; };
 		206F0DFE1D49FE5400F9F420 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		206F0E001D4A270C00F9F420 /* Calc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Calc.swift; sourceTree = "<group>"; };
 		206F0E021D4F6ED400F9F420 /* Duration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Duration.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 				206F0E061D4FBF8900F9F420 /* CurrentGlycemia.swift */,
 				20FDDA261D588FA300D3A540 /* Social.swift */,
 				2077B76D1D76C0D800155842 /* Welcome.swift */,
+				206EA3061D7EB23C00B8DEE4 /* HowTo.swift */,
 			);
 			name = Diactive;
 			path = DiaSport;
@@ -232,6 +235,7 @@
 				206F0E011D4A270C00F9F420 /* Calc.swift in Sources */,
 				206F0DFF1D49FE5400F9F420 /* Settings.swift in Sources */,
 				206F0E071D4FBF8900F9F420 /* CurrentGlycemia.swift in Sources */,
+				206EA3071D7EB23C00B8DEE4 /* HowTo.swift in Sources */,
 				20D5BCAB1D49DB9600EF0E2D /* Menu.swift in Sources */,
 				20D5BC831D49D44200EF0E2D /* AppDelegate.swift in Sources */,
 			);

@@ -13,8 +13,34 @@ class WelcomeViewController: UIViewController {
     
     @IBOutlet weak var backgroundImage: UIImageView!
     
+    private enum RealDeviceOrientation {
+        case Landscape, Portrait
+    }
+    
     private func setBackgroundImageForOrientation() {
-        if UIDevice.currentDevice().orientation.isLandscape {
+        var realDeviceOrientation: RealDeviceOrientation!
+        
+        if UIDevice.currentDevice().orientation.rawValue == 0 {
+            // ak nemam device orientation pouzijem ako indikator status bar
+            switch UIApplication.sharedApplication().statusBarOrientation {
+            case .LandscapeLeft, .LandscapeRight:
+                realDeviceOrientation = RealDeviceOrientation.Landscape
+                break
+            default:
+                realDeviceOrientation = RealDeviceOrientation.Portrait
+            }
+            
+        } else {
+            switch UIDevice.currentDevice().orientation {
+            case .LandscapeLeft, .LandscapeRight:
+                realDeviceOrientation = RealDeviceOrientation.Landscape
+                break
+            default:
+                realDeviceOrientation = RealDeviceOrientation.Portrait
+            }
+        }
+
+        if realDeviceOrientation == RealDeviceOrientation.Landscape {
             backgroundImage.image = UIImage(named: "welcome_back_land")
             
         } else {

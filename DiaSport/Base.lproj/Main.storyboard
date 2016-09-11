@@ -79,33 +79,22 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <attributedString key="attributedText">
                                     <fragment>
-                                        <string key="content">Diabetes Sport Carbs helps prevent the occurrence of hypoglycemic episode by sporting activities. Is very suitable for use of children (use of app under the supervision of an adult person) and adults patient with Diabetes Melitus Type 1 (DM1), who are taken insulin dose.
+                                        <string key="content">Diactive app is intended for sport active people with Diabetes Melitus.
 
-The application works on the base of the following infomations:
-- lenght of exercise
+Based on:
+- duration of exercise
 - intensity of sport activity
 - actual value of blood sugar level
-
-Result of this calculation easily help you to find out how many carbs you need consume before or during sport activity.
-
-Application was developed by results of study Dr. S. Colberg, which are long term assistant of sports doctors with accurate sports benefits of carbs to replenish glucose before and during physical activity of diabetes patients.
+app will count how much carbohydrates you need intake before or during sport activity and so it can decrease risk of hypoglycemic episode. Results of this calculations are based on study of Dr. S. Colberg, who operate long term as assistant of sports doctors.
 
 SAFETY INFORMATION
-Diabetes sport carbs is intended for guidance only and is not a substitute for professional medical advice. Always discuss use of the calculator with your diabetes educator or physician and only use personal settings agreed with them. 
+Diactive app is intended for guidance only and is not a substitute for professional medical advice. Use of this calculator always discuss with your diabetes eduacor or physician and also only use personal setting in accordance with them.
 
-WE ARE VERY OPEN FOR ANY YOUR SUGGESTIONS AND COMMENTS
-</string>
+If you have any suggestion or questions about the application, please do not hesitate to contact me to my email: marekmako@gmail.com</string>
                                         <attributes>
                                             <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="18" name="HelveticaNeue-Thin"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="If you have any suggestions or questions about this app, pls sent me an email: marekmako@gmail.com">
-                                        <attributes>
-                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="18" name="HelveticaNeue-Thin"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
@@ -599,7 +588,20 @@ WE ARE VERY OPEN FOR ANY YOUR SUGGESTIONS AND COMMENTS
                     <view key="view" contentMode="scaleToFill" id="Zdu-Te-LMa" customClass="MenuView" customModule="Diactive" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menu_logo" translatesAutoresizingMaskIntoConstraints="NO" id="BJ5-ow-kad">
+                                <rect key="frame" x="210" y="28" width="180" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="TfP-Oi-s8a"/>
+                                    <constraint firstAttribute="height" constant="40" id="s0i-c8-szM"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="0.36078431370000003" green="0.71372549019999998" blue="0.83921568629999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="BJ5-ow-kad" firstAttribute="top" secondItem="oIb-Hf-bm8" secondAttribute="bottom" constant="8" id="b9L-Aj-wCX"/>
+                            <constraint firstItem="BJ5-ow-kad" firstAttribute="centerX" secondItem="Zdu-Te-LMa" secondAttribute="centerX" id="tYY-kX-ta1"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1ay-CX-jtb" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -797,6 +799,7 @@ WE ARE VERY OPEN FOR ANY YOUR SUGGESTIONS AND COMMENTS
         <image name="duration_arrow_left" width="44" height="44"/>
         <image name="howto_arrow_left" width="44" height="44"/>
         <image name="intensity_arrow_left" width="44" height="44"/>
+        <image name="menu_logo" width="180" height="40"/>
         <image name="setting_arrow_left" width="44" height="44"/>
         <image name="setting_syringe" width="64" height="64"/>
         <image name="setting_weight" width="64" height="64"/>

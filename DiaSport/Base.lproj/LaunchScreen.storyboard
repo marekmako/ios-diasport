@@ -16,8 +16,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="launch_appicon" translatesAutoresizingMaskIntoConstraints="NO" id="Qqt-dB-MRa">
-                                <rect key="frame" x="250" y="231" width="100" height="138"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch_appicon" translatesAutoresizingMaskIntoConstraints="NO" id="Qqt-dB-MRa">
+                                <rect key="frame" x="200" y="200" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="B6J-ic-Zki"/>
+                                    <constraint firstAttribute="height" constant="200" id="Obu-8U-33Y"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.36078431370000003" green="0.71372549019999998" blue="0.83921568629999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -33,6 +37,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="launch_appicon" width="100" height="138"/>
+        <image name="launch_appicon" width="200" height="200"/>
     </resources>
 </document>

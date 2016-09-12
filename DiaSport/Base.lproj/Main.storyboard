@@ -21,15 +21,21 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XCm-Lo-l72">
-                                <rect key="frame" x="511" y="550" width="69" height="30"/>
-                                <state key="normal" title="Start Now"/>
+                                <rect key="frame" x="490" y="550" width="90" height="30"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" title="START NOW!">
+                                    <color key="titleColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <segue destination="kDH-hJ-UXl" kind="show" id="u7a-fC-Kxr"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rma-Gd-Fjq">
-                                <rect key="frame" x="20" y="550" width="96" height="30"/>
-                                <state key="normal" title="How To Do It?"/>
+                                <rect key="frame" x="20" y="550" width="121" height="30"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" title="HOW IT WORKS?">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <segue destination="LW3-Vp-Xky" kind="presentation" modalPresentationStyle="overCurrentContext" id="9c9-YB-NPz"/>
                                 </connections>
@@ -166,6 +172,9 @@ If you have any suggestion or questions about the application, please do not hes
                                                                 <variation key="heightClass=compact-widthClass=compact" misplaced="YES">
                                                                     <rect key="frame" x="0.0" y="0.0" width="154" height="21"/>
                                                                 </variation>
+                                                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="154" height="21"/>
+                                                                </variation>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="time of your plannig physical activity" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7se-TQ-tIg">
                                                                 <rect key="frame" x="0.0" y="21" width="192" height="43"/>
@@ -175,14 +184,23 @@ If you have any suggestion or questions about the application, please do not hes
                                                                 <variation key="heightClass=compact-widthClass=compact" misplaced="YES">
                                                                     <rect key="frame" x="0.0" y="21" width="154" height="43"/>
                                                                 </variation>
+                                                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                                                    <rect key="frame" x="0.0" y="21" width="154" height="43"/>
+                                                                </variation>
                                                             </label>
                                                         </subviews>
                                                         <variation key="heightClass=compact-widthClass=compact" misplaced="YES">
                                                             <rect key="frame" x="74" y="0.0" width="154" height="64"/>
                                                         </variation>
+                                                        <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                                            <rect key="frame" x="74" y="0.0" width="154" height="64"/>
+                                                        </variation>
                                                     </stackView>
                                                 </subviews>
                                                 <variation key="heightClass=compact-widthClass=compact" misplaced="YES">
+                                                    <rect key="frame" x="0.0" y="0.0" width="228" height="64"/>
+                                                </variation>
+                                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
                                                     <rect key="frame" x="0.0" y="0.0" width="228" height="64"/>
                                                 </variation>
                                             </stackView>
@@ -222,6 +240,9 @@ If you have any suggestion or questions about the application, please do not hes
                                                                 <variation key="heightClass=compact-widthClass=compact" misplaced="YES">
                                                                     <rect key="frame" x="0.0" y="0.0" width="158" height="22"/>
                                                                 </variation>
+                                                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="158" height="22"/>
+                                                                </variation>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="751" misplaced="YES" text="intensity of your sport activity" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="42e-Hh-jMx">
                                                                 <rect key="frame" x="0.0" y="22" width="158" height="43"/>
@@ -234,14 +255,23 @@ If you have any suggestion or questions about the application, please do not hes
                                                                 <variation key="heightClass=compact-widthClass=compact" misplaced="YES">
                                                                     <rect key="frame" x="0.0" y="22" width="158" height="43"/>
                                                                 </variation>
+                                                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                                                    <rect key="frame" x="0.0" y="22" width="158" height="43"/>
+                                                                </variation>
                                                             </label>
                                                         </subviews>
                                                         <variation key="heightClass=compact" misplaced="YES">
                                                             <rect key="frame" x="74" y="0.0" width="158" height="64"/>
                                                         </variation>
+                                                        <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                                            <rect key="frame" x="74" y="0.0" width="158" height="64"/>
+                                                        </variation>
                                                     </stackView>
                                                 </subviews>
                                                 <variation key="heightClass=compact" misplaced="YES">
+                                                    <rect key="frame" x="0.0" y="0.0" width="232" height="64"/>
+                                                </variation>
+                                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
                                                     <rect key="frame" x="0.0" y="0.0" width="232" height="64"/>
                                                 </variation>
                                             </stackView>
@@ -281,6 +311,9 @@ If you have any suggestion or questions about the application, please do not hes
                                                                 <variation key="heightClass=compact-widthClass=compact" misplaced="YES">
                                                                     <rect key="frame" x="0.0" y="0.0" width="158" height="22"/>
                                                                 </variation>
+                                                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="158" height="22"/>
+                                                                </variation>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="247" misplaced="YES" text="your current blood sugar level" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hjr-3w-FE5">
                                                                 <rect key="frame" x="0.0" y="22" width="158" height="43"/>
@@ -293,6 +326,9 @@ If you have any suggestion or questions about the application, please do not hes
                                                                 <variation key="heightClass=compact-widthClass=compact" misplaced="YES">
                                                                     <rect key="frame" x="0.0" y="22" width="158" height="43"/>
                                                                 </variation>
+                                                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                                                    <rect key="frame" x="0.0" y="22" width="158" height="43"/>
+                                                                </variation>
                                                             </label>
                                                         </subviews>
                                                         <variation key="heightClass=compact" misplaced="YES">
@@ -301,12 +337,18 @@ If you have any suggestion or questions about the application, please do not hes
                                                         <variation key="heightClass=compact-widthClass=compact" misplaced="YES">
                                                             <rect key="frame" x="74" y="0.0" width="158" height="64"/>
                                                         </variation>
+                                                        <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                                            <rect key="frame" x="74" y="0.0" width="158" height="64"/>
+                                                        </variation>
                                                     </stackView>
                                                 </subviews>
                                                 <variation key="heightClass=compact" misplaced="YES">
                                                     <rect key="frame" x="0.0" y="0.0" width="232" height="64"/>
                                                 </variation>
                                                 <variation key="heightClass=compact-widthClass=compact" misplaced="YES">
+                                                    <rect key="frame" x="0.0" y="0.0" width="232" height="64"/>
+                                                </variation>
+                                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
                                                     <rect key="frame" x="0.0" y="0.0" width="232" height="64"/>
                                                 </variation>
                                             </stackView>

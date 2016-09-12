@@ -21,7 +21,6 @@
 		20D5BC8D1D49D44300EF0E2D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20D5BC8B1D49D44300EF0E2D /* LaunchScreen.storyboard */; };
 		20D5BC981D49D44300EF0E2D /* DiaSportTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D5BC971D49D44300EF0E2D /* DiaSportTests.swift */; };
 		20D5BCAB1D49DB9600EF0E2D /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D5BCAA1D49DB9600EF0E2D /* Menu.swift */; };
-		20FDDA271D588FA300D3A540 /* Social.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FDDA261D588FA300D3A540 /* Social.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,7 +52,6 @@
 		20D5BC971D49D44300EF0E2D /* DiaSportTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaSportTests.swift; sourceTree = "<group>"; };
 		20D5BC991D49D44300EF0E2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		20D5BCAA1D49DB9600EF0E2D /* Menu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
-		20FDDA261D588FA300D3A540 /* Social.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Social.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,7 +106,6 @@
 				206F0E021D4F6ED400F9F420 /* Duration.swift */,
 				206F0E041D4FBA3100F9F420 /* Intensity.swift */,
 				206F0E061D4FBF8900F9F420 /* CurrentGlycemia.swift */,
-				20FDDA261D588FA300D3A540 /* Social.swift */,
 				2077B76D1D76C0D800155842 /* Welcome.swift */,
 				206EA3061D7EB23C00B8DEE4 /* HowTo.swift */,
 			);
@@ -231,7 +228,6 @@
 				206F0E031D4F6ED400F9F420 /* Duration.swift in Sources */,
 				2077B76E1D76C0D800155842 /* Welcome.swift in Sources */,
 				206F0E051D4FBA3100F9F420 /* Intensity.swift in Sources */,
-				20FDDA271D588FA300D3A540 /* Social.swift in Sources */,
 				206F0E011D4A270C00F9F420 /* Calc.swift in Sources */,
 				206F0DFF1D49FE5400F9F420 /* Settings.swift in Sources */,
 				206F0E071D4FBF8900F9F420 /* CurrentGlycemia.swift in Sources */,

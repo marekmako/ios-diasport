@@ -367,7 +367,7 @@
 				INFOPLIST_FILE = DiaSport/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.marekmako.iDia-Sport";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.iDia-Sport";
 				PRODUCT_NAME = Diactive;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -382,7 +382,7 @@
 				INFOPLIST_FILE = DiaSport/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.marekmako.iDia-Sport";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.iDia-Sport";
 				PRODUCT_NAME = Diactive;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

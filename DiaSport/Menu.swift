@@ -105,8 +105,8 @@ class MenuView: UIView {
         let screenHeight = UIScreen.mainScreen().bounds.height
         
         // Button Setting
-        let buttonWidth: CGFloat = 85
-        let buttonHeight: CGFloat = 70
+        let buttonWidth: CGFloat = 80
+        let buttonHeight: CGFloat = 65
         let buttonCenterXPos: CGFloat = ((screenWidth / 2) - (buttonWidth / 2))
         let buttonCenterYPos: CGFloat = ((screenHeight / 2) - (buttonHeight / 2))
         

@@ -11,20 +11,20 @@ import UIKit
 
 class SettingsViewController: UIViewController {
     
-    private lazy var userSettings = UserSettings()
+    fileprivate lazy var userSettings = UserSettings()
     
     // MARK: IBAction
     
     @IBAction func onCancel() {
-        dismissViewControllerAnimated(true, completion: nil)
+        dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func onWeightChange(sender: UISegmentedControl) {
+    @IBAction func onWeightChange(_ sender: UISegmentedControl) {
         let weightUnit = WeightUnit(rawValue: sender.selectedSegmentIndex)!
         userSettings.weightUnit = weightUnit
     }
     
-    @IBAction func onGlycemiaUnitChange(sender: UISegmentedControl) {
+    @IBAction func onGlycemiaUnitChange(_ sender: UISegmentedControl) {
         let glycemiaUnit = GlycemiaUnit(rawValue: sender.selectedSegmentIndex)!
         userSettings.glycemiaUnit = glycemiaUnit
     }
@@ -46,9 +46,9 @@ class SettingsViewController: UIViewController {
     }
     
     // MARK: Initial style for segmentcontroll
-    private func styleForSegmentControl(segmentControl: UISegmentedControl) {
-        segmentControl.setTitleTextAttributes([NSForegroundColorAttributeName : UIColor.whiteColor()], forState: .Normal)
-        segmentControl.setTitleTextAttributes([NSForegroundColorAttributeName : UIColor.whiteColor()], forState: .Selected)
+    fileprivate func styleForSegmentControl(_ segmentControl: UISegmentedControl) {
+        segmentControl.setTitleTextAttributes([NSForegroundColorAttributeName : UIColor.white], for: UIControlState())
+        segmentControl.setTitleTextAttributes([NSForegroundColorAttributeName : UIColor.white], for: .selected)
     }
     
     // MARK: lifecycle
@@ -57,13 +57,13 @@ class SettingsViewController: UIViewController {
 
 
 enum WeightUnit: Int {
-    case Gram, Ounce
+    case gram, ounce
     
     func describe() -> String {
         switch self {
-        case .Gram:
+        case .gram:
             return "gram (g)"
-        case .Ounce:
+        case .ounce:
             return "ounce (oz)"
         }
     }
@@ -72,13 +72,13 @@ enum WeightUnit: Int {
 
 
 enum GlycemiaUnit: Int {
-    case Mmoll, Mgdl
+    case mmoll, mgdl
     
     func describe() -> String {
         switch self {
-        case .Mgdl:
+        case .mgdl:
             return "mg/dl"
-        case .Mmoll:
+        case .mmoll:
             return "mmol/l"
         }
     }
@@ -89,34 +89,34 @@ enum GlycemiaUnit: Int {
 // TODO: implement
 class UserSettings {
     
-    private let kWeightUnitNameForUserDefaults = "weight_unit"
+    fileprivate let kWeightUnitNameForUserDefaults = "weight_unit"
     
-    private let kGlycemiaUnitNameForUserDefaults = "glycemia_unit"
+    fileprivate let kGlycemiaUnitNameForUserDefaults = "glycemia_unit"
     
-    private let userDefaults = NSUserDefaults.standardUserDefaults()
+    fileprivate let userDefaults = UserDefaults.standard
     
     
     
     var weightUnit: WeightUnit {
         get {
-            let userDefaultValue = userDefaults.integerForKey(kWeightUnitNameForUserDefaults)
+            let userDefaultValue = userDefaults.integer(forKey: kWeightUnitNameForUserDefaults)
             return WeightUnit(rawValue: userDefaultValue)!
         }
         set {
             let userDefaultValue = newValue.rawValue
-            userDefaults.setInteger(userDefaultValue, forKey: kWeightUnitNameForUserDefaults)
+            userDefaults.set(userDefaultValue, forKey: kWeightUnitNameForUserDefaults)
             userDefaults.synchronize()
         }
     }
     
     var glycemiaUnit: GlycemiaUnit {
         get {
-            let userDefaultValue = userDefaults.integerForKey(kGlycemiaUnitNameForUserDefaults)
+            let userDefaultValue = userDefaults.integer(forKey: kGlycemiaUnitNameForUserDefaults)
             return GlycemiaUnit(rawValue: userDefaultValue)!
         }
         set {
             let userDefaultValue = newValue.rawValue
-            userDefaults.setInteger(userDefaultValue, forKey: kGlycemiaUnitNameForUserDefaults)
+            userDefaults.set(userDefaultValue, forKey: kGlycemiaUnitNameForUserDefaults)
             userDefaults.synchronize()
         }
     }

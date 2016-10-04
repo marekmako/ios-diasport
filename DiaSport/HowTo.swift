@@ -14,10 +14,10 @@ class HowToViewController: UIViewController {
     @IBOutlet weak var textView: UITextView!
     
     @IBAction func onCancel() {
-        dismissViewControllerAnimated(true, completion: nil)
+        dismiss(animated: true, completion: nil)
     }
     
     override func viewDidLayoutSubviews() {
-        textView.setContentOffset(CGPointZero, animated: false)
+        textView.setContentOffset(CGPoint.zero, animated: false)
     }
 }

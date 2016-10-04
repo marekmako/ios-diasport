@@ -20,7 +20,7 @@ class MenuViewController: UIViewController, MenuViewDelegate {
     // MARK: MenuViewDelegate
     
     func upButtonDidTouch() { // go to calc
-        guard let ctrl = storyboard?.instantiateViewControllerWithIdentifier(CALC_STORYBOARD_ID) else {
+        guard let ctrl = storyboard?.instantiateViewController(withIdentifier: CALC_STORYBOARD_ID) else {
             return
         }
         presentViewControllerModaly(ctrl)
@@ -29,26 +29,26 @@ class MenuViewController: UIViewController, MenuViewDelegate {
     func downButtonDidTouch() {
         let activityVC = UIActivityViewController(activityItems: [SHARE_MESSAGE], applicationActivities: nil)
         
-        presentViewController(activityVC, animated: true, completion: nil)
+        present(activityVC, animated: true, completion: nil)
     }
     
     func leftButtonDidTouch() { // go to knowhow
-        guard let ctrl = storyboard?.instantiateViewControllerWithIdentifier(KNOWHOW_STORYBOARD_ID) else {
+        guard let ctrl = storyboard?.instantiateViewController(withIdentifier: KNOWHOW_STORYBOARD_ID) else {
             return
         }
         presentViewControllerModaly(ctrl)
     }
     
     func rightButtonDidTouch() { // go to settings
-        guard let ctrl = storyboard?.instantiateViewControllerWithIdentifier(SETTINGS_STORYBOARD_ID) else {
+        guard let ctrl = storyboard?.instantiateViewController(withIdentifier: SETTINGS_STORYBOARD_ID) else {
             return
         }
         presentViewControllerModaly(ctrl)
     }
     
-    private func presentViewControllerModaly(viewControllerToPresent: UIViewController) {
-        viewControllerToPresent.modalPresentationStyle = .OverCurrentContext
-        presentViewController(viewControllerToPresent, animated: true, completion: nil)
+    fileprivate func presentViewControllerModaly(_ viewControllerToPresent: UIViewController) {
+        viewControllerToPresent.modalPresentationStyle = .overCurrentContext
+        present(viewControllerToPresent, animated: true, completion: nil)
     }
 }
 
@@ -62,7 +62,7 @@ protocol MenuViewDelegate {
 
 
 enum MenuViewButtonTypes {
-    case Up, Down, Left, Right
+    case up, down, left, right
 }
 
 
@@ -82,27 +82,27 @@ class MenuView: UIView {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
-        upButton.setBackgroundImage(UIImage(named: "menu_runner"), forState: .Normal)
-        addTargetToButton(.Up)
+        upButton.setBackgroundImage(UIImage(named: "menu_runner"), for: UIControlState())
+        addTargetToButton(.up)
         addSubview(upButton)
         
-        downButton.setBackgroundImage(UIImage(named: "menu_social"), forState: .Normal)
-        addTargetToButton(.Down)
+        downButton.setBackgroundImage(UIImage(named: "menu_social"), for: UIControlState())
+        addTargetToButton(.down)
         addSubview(downButton)
         
-        leftButton.setBackgroundImage(UIImage(named: "menu_help"), forState: .Normal)
-        addTargetToButton(.Left)
+        leftButton.setBackgroundImage(UIImage(named: "menu_help"), for: UIControlState())
+        addTargetToButton(.left)
         addSubview(leftButton)
         
-        rightButton.setBackgroundImage(UIImage(named: "menu_setting"), forState: .Normal)
-        addTargetToButton(.Right)
+        rightButton.setBackgroundImage(UIImage(named: "menu_setting"), for: UIControlState())
+        addTargetToButton(.right)
         addSubview(rightButton)
     }
     
     override func layoutSubviews() {
         // SETTINGS
-        let screenWidth = UIScreen.mainScreen().bounds.width
-        let screenHeight = UIScreen.mainScreen().bounds.height
+        let screenWidth = UIScreen.main.bounds.width
+        let screenHeight = UIScreen.main.bounds.height
         
         // Button Setting
         let buttonWidth: CGFloat = 80
@@ -116,27 +116,27 @@ class MenuView: UIView {
         // up
         let upButtonXPos: CGFloat = buttonCenterXPos
         let upButtonYPos: CGFloat = (buttonCenterYPos / 2)
-        upButton.frame = CGRectMake(upButtonXPos, upButtonYPos, buttonWidth, buttonHeight)
+        upButton.frame = CGRect(x: upButtonXPos, y: upButtonYPos, width: buttonWidth, height: buttonHeight)
         upButton.layer.cornerRadius = upButton.frame.width / 2.35
         
         // down
         let downButtonXPos: CGFloat = buttonCenterXPos
         let downButtonYPos: CGFloat = (buttonCenterYPos / 2) + buttonCenterYPos
-        downButton.frame = CGRectMake(downButtonXPos, downButtonYPos, buttonWidth, buttonHeight)
+        downButton.frame = CGRect(x: downButtonXPos, y: downButtonYPos, width: buttonWidth, height: buttonHeight)
         downButton.layer.cornerRadius = downButton.frame.width / 2.35
         
 
         // left
         let leftButtonXPos: CGFloat = buttonCenterXPos / 15
         let leftButtonYPos: CGFloat = buttonCenterYPos
-        leftButton.frame = CGRectMake(leftButtonXPos, leftButtonYPos, buttonWidth, buttonHeight)
+        leftButton.frame = CGRect(x: leftButtonXPos, y: leftButtonYPos, width: buttonWidth, height: buttonHeight)
         leftButton.layer.cornerRadius = leftButton.frame.width / 2.35
         
         
         // right
         let rightButtonXPos: CGFloat = ((buttonCenterXPos / 15) * 14) + buttonCenterXPos
         let rightButtonYPos: CGFloat = buttonCenterYPos
-        rightButton.frame = CGRectMake(rightButtonXPos, rightButtonYPos, buttonWidth, buttonHeight)
+        rightButton.frame = CGRect(x: rightButtonXPos, y: rightButtonYPos, width: buttonWidth, height: buttonHeight)
         rightButton.layer.cornerRadius = rightButton.frame.width / 2.35
         
         
@@ -147,46 +147,46 @@ class MenuView: UIView {
         let round1Height: CGFloat = (downButtonYPos - upButtonYPos) - (buttonHeight / 4)
         let round1XPos: CGFloat = (screenWidth / 2) - (round1Width / 2)
         let round1YPos: CGFloat = (screenHeight / 2) - (round1Height / 2)
-        round1Rect = CGRectMake(round1XPos, round1YPos, round1Width, round1Height)
+        round1Rect = CGRect(x: round1XPos, y: round1YPos, width: round1Width, height: round1Height)
         // 2.
         let round2Width: CGFloat = (rightButtonXPos - leftButtonXPos)
         let round2Height: CGFloat = (downButtonYPos - upButtonYPos) + (buttonHeight / 3)
         let round2XPos: CGFloat = (screenWidth / 2) - (round2Width / 2)
         let round2YPos: CGFloat = (screenHeight / 2) - (round2Height / 2)
-        round2Rect = CGRectMake(round2XPos, round2YPos, round2Width, round2Height)
+        round2Rect = CGRect(x: round2XPos, y: round2YPos, width: round2Width, height: round2Height)
     }
 
-    override func drawRect(rect: CGRect) {
+    override func draw(_ rect: CGRect) {
         // Draw Round
         
         // 1.
-        let round1 = UIBezierPath(ovalInRect: round1Rect)
+        let round1 = UIBezierPath(ovalIn: round1Rect)
         round1.lineWidth = 2
-        UIColor.whiteColor().setStroke()
+        UIColor.white.setStroke()
         round1.stroke()
         
         // 2.
-        let round2 = UIBezierPath(ovalInRect: round2Rect)
+        let round2 = UIBezierPath(ovalIn: round2Rect)
         round2.lineWidth = 2
-        UIColor.whiteColor().setStroke()
+        UIColor.white.setStroke()
         round2.stroke()
     }
     
     // MARK: support for MenuViewDelegate protocol
     
-    func addTargetToButton(buttonType: MenuViewButtonTypes) {
+    func addTargetToButton(_ buttonType: MenuViewButtonTypes) {
         switch buttonType {
-        case .Up:
-            upButton.addTarget(self, action: #selector(MenuView.upButtonDidTouch), forControlEvents: .TouchUpInside)
+        case .up:
+            upButton.addTarget(self, action: #selector(MenuView.upButtonDidTouch), for: .touchUpInside)
             break
-        case .Down:
-            downButton.addTarget(self, action: #selector(MenuView.downButtonDidTouch), forControlEvents: .TouchUpInside)
+        case .down:
+            downButton.addTarget(self, action: #selector(MenuView.downButtonDidTouch), for: .touchUpInside)
             break
-        case .Left:
-            leftButton.addTarget(self, action: #selector(MenuView.leftButtonDidTouch), forControlEvents: .TouchUpInside)
+        case .left:
+            leftButton.addTarget(self, action: #selector(MenuView.leftButtonDidTouch), for: .touchUpInside)
             break
-        case .Right:
-            rightButton.addTarget(self, action: #selector(MenuView.rightButtonDidTouch), forControlEvents: .TouchUpInside)
+        case .right:
+            rightButton.addTarget(self, action: #selector(MenuView.rightButtonDidTouch), for: .touchUpInside)
         }
     }
     
@@ -211,7 +211,7 @@ class MenuView: UIView {
     class func CreateButton() -> UIButton {
         let button = UIButton()
         
-        button.layer.backgroundColor = UIColor(red: 92/255, green: 182/255, blue: 214/255, alpha: 1).CGColor
+        button.layer.backgroundColor = UIColor(red: 92/255, green: 182/255, blue: 214/255, alpha: 1).cgColor
 //        button.layer.borderWidth = 2.5
 //        button.layer.borderColor = UIColor.whiteColor().CGColor
         

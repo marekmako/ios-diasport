@@ -23,7 +23,7 @@ class CurrentGlycemiaControllerView: UIViewController {
             calcCtrl.dataContainer.currentGlycemiaDataIndex = currentGlycemiaPicker.selectedValueAsCalcResutIndex()
         }
         
-        dismissViewControllerAnimated(true, completion: nil)
+        dismiss(animated: true, completion: nil)
     }
     
     // MARK: lifecycle
@@ -34,9 +34,9 @@ class CurrentGlycemiaPickerView: CalcPickerView, CalcPickerViewSelectedDataProto
     
     let settings = UserSettings()
     
-    private var mmollSelectedValue: [String] = ["0", ".", "0"]
+    fileprivate var mmollSelectedValue: [String] = ["0", ".", "0"]
     
-    private lazy var mmollData: [[String]] = {
+    fileprivate lazy var mmollData: [[String]] = {
         var integers = [String]() // cele cisla
         for i in 3..<16 {
             integers.append("\(i)")
@@ -52,7 +52,7 @@ class CurrentGlycemiaPickerView: CalcPickerView, CalcPickerViewSelectedDataProto
         return [integers, separator, decimals, ["mmol/l"]]
     }()
     
-    private lazy var mgdlData: [[String]] = {
+    fileprivate lazy var mgdlData: [[String]] = {
         var integers = [String]()
         
         for var i in 54..<271 {
@@ -65,20 +65,20 @@ class CurrentGlycemiaPickerView: CalcPickerView, CalcPickerViewSelectedDataProto
     
     override var data: [[String]] {
         switch settings.glycemiaUnit {
-        case .Mgdl:
+        case .mgdl:
             
             return mgdlData
 
-        case .Mmoll:
+        case .mmoll:
             return mmollData
         }
     }
     
     // MARK: UIPickerViewDelegate
     
-    func pickerView(pickerView: UIPickerView, widthForComponent component: Int) -> CGFloat {
+    func pickerView(_ pickerView: UIPickerView, widthForComponent component: Int) -> CGFloat {
         switch settings.glycemiaUnit {
-        case .Mmoll: // 4 prvky
+        case .mmoll: // 4 prvky
             let partialWidth: CGFloat = pickerView.bounds.width / 4
             
             switch component {
@@ -90,7 +90,7 @@ class CurrentGlycemiaPickerView: CalcPickerView, CalcPickerViewSelectedDataProto
                 return 0.0
             }
             
-        case .Mgdl: // 2 prvky
+        case .mgdl: // 2 prvky
             return pickerView.bounds.width / 2
         }
     }
@@ -99,13 +99,13 @@ class CurrentGlycemiaPickerView: CalcPickerView, CalcPickerViewSelectedDataProto
     
     func selectedValueAsString() -> String {
         switch settings.glycemiaUnit {
-        case .Mmoll:
-            return "\(data[0][selectedRowInComponent(0)])" +
-                "\(data[1][selectedRowInComponent(1)])" +
-                "\(data[2][selectedRowInComponent(2)])"
+        case .mmoll:
+            return "\(data[0][selectedRow(inComponent: 0)])" +
+                "\(data[1][selectedRow(inComponent: 1)])" +
+                "\(data[2][selectedRow(inComponent: 2)])"
             
-        case .Mgdl:
-            return data[0][selectedRowInComponent(0)]
+        case .mgdl:
+            return data[0][selectedRow(inComponent: 0)]
         }
     }
     
@@ -115,20 +115,20 @@ class CurrentGlycemiaPickerView: CalcPickerView, CalcPickerViewSelectedDataProto
     
     
     
-    private class PickerValueToCalcResultIndexTransformator {
+    fileprivate class PickerValueToCalcResultIndexTransformator {
         
-        class func transform(value: String, unit: GlycemiaUnit) -> Int? {
+        class func transform(_ value: String, unit: GlycemiaUnit) -> Int? {
             let doubleValue = (value as NSString).doubleValue
             
             switch unit {
-            case .Mgdl:
+            case .mgdl:
                 return mgdlToIndex(doubleValue)
-            case .Mmoll:
+            case .mmoll:
                 return mmollToIndex(doubleValue)
             }
         }
         
-        class func mmollToIndex(value: Double) -> Int? {
+        class func mmollToIndex(_ value: Double) -> Int? {
             let indexRanges =  [ [3.0, 5.5], [5.6, 8.0], [8.1, 11.0], [11.1, 16.0] ]
             
             for i in 0..<indexRanges.count {
@@ -143,7 +143,7 @@ class CurrentGlycemiaPickerView: CalcPickerView, CalcPickerViewSelectedDataProto
             return nil
         }
         
-        class func mgdlToIndex(value: Double) -> Int? {
+        class func mgdlToIndex(_ value: Double) -> Int? {
             let indexRanges =  [ [54.0, 99.0], [100.0, 144.0], [145.0, 198.0], [198.0, 271.0] ]
             
             for i in 0..<indexRanges.count {

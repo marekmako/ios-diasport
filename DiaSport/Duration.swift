@@ -17,13 +17,13 @@ class DurationViewController: UIViewController {
     
     // MARK: IBAction
     
-    @IBAction func onCancel(sender: AnyObject) {
+    @IBAction func onCancel(_ sender: AnyObject) {
         if let calcCtrl = presentingViewController as? CalcViewController {
             calcCtrl.dataContainer.durationValue = durationPicker.selectedValueAsString()
             calcCtrl.dataContainer.durationDataIndex = durationPicker.selectedValueAsCalcResutIndex()
         }
         
-        dismissViewControllerAnimated(true, completion: nil)
+        dismiss(animated: true, completion: nil)
     }
     
     // MARK: lifecycle
@@ -39,11 +39,11 @@ class DurationPickerView: CalcPickerView, CalcPickerViewSelectedDataProtocol {
     // MARK: CalcPickerViewSelectedDataProtocol
     
     func selectedValueAsString() -> String {
-        return data[0][selectedRowInComponent(0)]
+        return data[0][selectedRow(inComponent: 0)]
     }
     
     func selectedValueAsCalcResutIndex() -> Int {
-        return selectedRowInComponent(0)
+        return selectedRow(inComponent: 0)
     }
 }
 

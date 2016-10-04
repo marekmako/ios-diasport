@@ -18,19 +18,19 @@ class CalcViewController: UIViewController, CalcPickerDataContainerDelegate {
     
     @IBOutlet weak var durationButton: UIButton! {
         didSet {
-            durationButton.setTitle("", forState: .Normal)
+            durationButton.setTitle("", for: UIControlState())
         }
     }
     
     @IBOutlet weak var intensityButton: UIButton! {
         didSet {
-            intensityButton.setTitle("", forState: .Normal)
+            intensityButton.setTitle("", for: UIControlState())
         }
     }
 
     @IBOutlet weak var currentGlycemiaButton: UIButton! {
         didSet {
-            currentGlycemiaButton.setTitle("", forState: .Normal)
+            currentGlycemiaButton.setTitle("", for: UIControlState())
         }
     }
     
@@ -43,7 +43,7 @@ class CalcViewController: UIViewController, CalcPickerDataContainerDelegate {
     // MARK: IBAction
     
     @IBAction func onCancel() {
-        dismissViewControllerAnimated(true, completion: nil)
+        dismiss(animated: true, completion: nil)
     }
     
     // MARK: lifecycle
@@ -57,28 +57,28 @@ class CalcViewController: UIViewController, CalcPickerDataContainerDelegate {
     // MARK: CalcPickerDataContainerDelegate
     
     func dataCompleted() {
-        calcButton.hidden = false
+        calcButton.isHidden = false
     }
     
     func dataIncomplete() {
-        calcButton.hidden = true
+        calcButton.isHidden = true
     }
     
-    func durationValueChanged(value: String) {
-        durationButton.setTitle(value, forState: .Normal)
+    func durationValueChanged(_ value: String) {
+        durationButton.setTitle(value, for: UIControlState())
     }
     
-    func intensityValueChanged(value: String) {
-        intensityButton.setTitle(value, forState: .Normal)
+    func intensityValueChanged(_ value: String) {
+        intensityButton.setTitle(value, for: UIControlState())
     }
     
-    func currentGlycemiaValueChanged(value: String) {
-        currentGlycemiaButton.setTitle(value, forState: .Normal)
+    func currentGlycemiaValueChanged(_ value: String) {
+        currentGlycemiaButton.setTitle(value, for: UIControlState())
     }
     
     // MARK: Navigation
     
-    override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         if identifier == "toCalcResultViewController" {
             guard (dataContainer.durationDataIndex != nil) else {
                 dataIncomplete()
@@ -97,8 +97,8 @@ class CalcViewController: UIViewController, CalcPickerDataContainerDelegate {
         return true
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if let calcResultVC = segue.destinationViewController as? CalcResultViewController {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let calcResultVC = segue.destination as? CalcResultViewController {
             calcResultVC.durationIndex = dataContainer.durationDataIndex
             calcResultVC.intentsityIndex = dataContainer.intensityDataIndex
             calcResultVC.currentGlycemiaIndex = dataContainer.currentGlycemiaDataIndex
@@ -132,23 +132,23 @@ class CalcPickerView: UIPickerView, UIPickerViewDelegate, UIPickerViewDataSource
     
     // MARK: UIPickerViewDataSource
     
-    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return data.count
     }
     
-    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return data[component].count
     }
     
     // MARK: UIPickerViewDelegate
     
-    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return data[component][row]
     }
     
-    func pickerView(pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
+    func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
         // MARK: picker text color
-        return NSAttributedString(string: data[component][row], attributes: [NSForegroundColorAttributeName : UIColor.whiteColor()])
+        return NSAttributedString(string: data[component][row], attributes: [NSForegroundColorAttributeName : UIColor.white])
     }
 }
 
@@ -157,9 +157,9 @@ class CalcPickerView: UIPickerView, UIPickerViewDelegate, UIPickerViewDataSource
 protocol CalcPickerDataContainerDelegate {
     func dataCompleted()
     func dataIncomplete()
-    func durationValueChanged(value: String)
-    func intensityValueChanged(value: String)
-    func currentGlycemiaValueChanged(value: String)
+    func durationValueChanged(_ value: String)
+    func intensityValueChanged(_ value: String)
+    func currentGlycemiaValueChanged(_ value: String)
 }
 
 
@@ -218,7 +218,7 @@ class CalcPickerDataContainer {
     
     // MARK: support for CalcPickerDataContainerDelegate
     
-    private func isComplete() {
+    fileprivate func isComplete() {
         guard let _ = durationDataIndex else {
             delegate?.dataIncomplete()
             return
@@ -240,10 +240,10 @@ class CalcPickerDataContainer {
 
 class CalcResult {
     
-    private let userSettings = UserSettings()
+    fileprivate let userSettings = UserSettings()
     
     /// 0 duration, 1 intensity, 2 massunit, 3 glycemia
-    private var data: [[[[String]]]]!
+    fileprivate var data: [[[[String]]]]!
     
     init() {
         data = [
@@ -348,8 +348,8 @@ class CalcResult {
         ]
     }
     
-    func get(durationIndex durationIndex: Int, intensityIndex: Int, currentGlycemiaIndex: Int) -> String {
-        let weightUnitIndex: Int = (userSettings.weightUnit == .Gram ? 1 : 0)
+    func get(durationIndex: Int, intensityIndex: Int, currentGlycemiaIndex: Int) -> String {
+        let weightUnitIndex: Int = (userSettings.weightUnit == .gram ? 1 : 0)
         return data[durationIndex][intensityIndex][weightUnitIndex][currentGlycemiaIndex]
     }
 }
@@ -378,7 +378,7 @@ class CalcResultViewController: UIViewController {
     @IBOutlet weak var cancelButton: UIButton! {
         didSet {
             cancelButton.layer.borderWidth = 1
-            cancelButton.layer.borderColor = UIColor.whiteColor().CGColor
+            cancelButton.layer.borderColor = UIColor.white.cgColor
             cancelButton.layer.cornerRadius = 5
         }
     }
@@ -388,7 +388,7 @@ class CalcResultViewController: UIViewController {
     // MARK: IBAction
     
     @IBAction func onCancel() {
-        dismissViewControllerAnimated(true, completion: nil)
+        dismiss(animated: true, completion: nil)
     }
     
     // MARK: lifecycle

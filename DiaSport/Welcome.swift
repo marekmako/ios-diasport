@@ -13,34 +13,34 @@ class WelcomeViewController: UIViewController {
     
     @IBOutlet weak var backgroundImage: UIImageView!
     
-    private enum RealDeviceOrientation {
-        case Landscape, Portrait
+    fileprivate enum RealDeviceOrientation {
+        case landscape, portrait
     }
     
-    private func setBackgroundImageForOrientation() {
+    fileprivate func setBackgroundImageForOrientation() {
         var realDeviceOrientation: RealDeviceOrientation!
         
-        if UIDevice.currentDevice().orientation.rawValue == 0 {
+        if UIDevice.current.orientation.rawValue == 0 {
             // ak nemam device orientation pouzijem ako indikator status bar
-            switch UIApplication.sharedApplication().statusBarOrientation {
-            case .LandscapeLeft, .LandscapeRight:
-                realDeviceOrientation = RealDeviceOrientation.Landscape
+            switch UIApplication.shared.statusBarOrientation {
+            case .landscapeLeft, .landscapeRight:
+                realDeviceOrientation = RealDeviceOrientation.landscape
                 break
             default:
-                realDeviceOrientation = RealDeviceOrientation.Portrait
+                realDeviceOrientation = RealDeviceOrientation.portrait
             }
             
         } else {
-            switch UIDevice.currentDevice().orientation {
-            case .LandscapeLeft, .LandscapeRight:
-                realDeviceOrientation = RealDeviceOrientation.Landscape
+            switch UIDevice.current.orientation {
+            case .landscapeLeft, .landscapeRight:
+                realDeviceOrientation = RealDeviceOrientation.landscape
                 break
             default:
-                realDeviceOrientation = RealDeviceOrientation.Portrait
+                realDeviceOrientation = RealDeviceOrientation.portrait
             }
         }
 
-        if realDeviceOrientation == RealDeviceOrientation.Landscape {
+        if realDeviceOrientation == RealDeviceOrientation.landscape {
             backgroundImage.image = UIImage(named: "welcome_back_land")
             
         } else {
@@ -48,11 +48,11 @@ class WelcomeViewController: UIViewController {
         }
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         setBackgroundImageForOrientation()
     }
     
-    override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         setBackgroundImageForOrientation()
     }
     

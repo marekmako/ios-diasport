@@ -23,7 +23,7 @@ class IntensityViewController: UIViewController {
             calcCtrl.dataContainer.intensityDataIndex = intensityPicker.selectedValueAsCalcResutIndex()
         }
         
-        dismissViewControllerAnimated(true, completion: nil)
+        dismiss(animated: true, completion: nil)
     }
     
     // MARK: lifecycle
@@ -39,10 +39,10 @@ class IntensityPickerView: CalcPickerView, CalcPickerViewSelectedDataProtocol {
     // MARK: CalcPickerViewSelectedDataProtocol
     
     func selectedValueAsString() -> String {
-        return data[0][selectedRowInComponent(0)]
+        return data[0][selectedRow(inComponent: 0)]
     }
     
     func selectedValueAsCalcResutIndex() -> Int {
-        return selectedRowInComponent(0)
+        return selectedRow(inComponent: 0)
     }
 }

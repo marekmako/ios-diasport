@@ -29,6 +29,11 @@ class MenuViewController: UIViewController, MenuViewDelegate {
     func downButtonDidTouch() {
         let activityVC = UIActivityViewController(activityItems: [SHARE_MESSAGE], applicationActivities: nil)
         
+        // TODO: fix pre ipad
+        if activityVC.responds(to: #selector(getter: popoverPresentationController)) {
+            activityVC.popoverPresentationController?.sourceView = view
+        }
+        
         present(activityVC, animated: true, completion: nil)
     }
     
